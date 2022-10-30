@@ -1,0 +1,657 @@
+fileFormatVersion: 2
+guid: 72120835a5e4e664d8c768501ccf027c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Gun Outline
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 747
+      y: 4
+      width: 54
+      height: 37
+    spriteID: a2236ebb99dfe10448905b0f53304842
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 33, y: -1333}
+  - name: Gun
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 976
+      width: 138
+      height: 35
+    spriteID: 9bff1f5187343e6488d0b7e618bbff74
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -717, y: -362}
+  - name: Top Piece
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 944
+      width: 109
+      height: 54
+    spriteID: a9f23ed176d693041add6c9ab7c32a8f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -510, y: -385}
+  - name: Top HL
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 285
+      y: 992
+      width: 88
+      height: 15
+    spriteID: da52c2794d4db5449ae3fa42321f3ac0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -396, y: -335}
+  - name: Attachment HL
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 747
+      y: 324
+      width: 152
+      height: 30
+    spriteID: 418b1a6419e237e4b9080b2379b45784
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 99, y: -981}
+  - name: 'Attachment '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 907
+      y: 324
+      width: 89
+      height: 45
+    spriteID: 36e21d4cc56e73541aa39b1ee3e9eaae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 226, y: -972}
+  - name: Shadow
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 917
+      y: 390
+      width: 73
+      height: 40
+    spriteID: 8ca8cf28ef9ea4d47a2f25f43b4de162
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 247, y: -564}
+  - name: Bottom HL
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 734
+      y: 390
+      width: 175
+      height: 19
+    spriteID: 35763ab90576c624b9e01e1cef1377fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: -641}
+  - name: Dotted Line
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 426
+      y: 390
+      width: 300
+      height: 46
+    spriteID: cb071797bc0d46a4ca1206f8ac8341ca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -141, y: -765}
+  - name: 'White Circle '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 381
+      y: 992
+      width: 20
+      height: 20
+    spriteID: 27565bebb181fea428e80cd7c1db3467
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -325, y: -167}
+  - name: Red Circle
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 285
+      y: 819
+      width: 106
+      height: 107
+    spriteID: 2e25f4190cc106b45ad7539e7ffbdac3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -379, y: -298}
+  - name: White Circle Outline
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 819
+      width: 116
+      height: 117
+    spriteID: 1d2819f0c1e65a945ad954b7659922bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -498, y: -293}
+  - name: Gray Middle Line
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 426
+      y: 324
+      width: 313
+      height: 58
+    spriteID: cbc55bb4a25270a47b0cf9d4f806d041
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -134, y: -817}
+  - name: White Middle Line
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 414
+      height: 807
+    spriteID: ba11960f192f2444b82fe7802a8268a4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -455, y: -1131}
+  - name: Gray Circle
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 819
+      width: 149
+      height: 149
+    spriteID: a74c5908105782143b1e44d7fe0ec60e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -639, y: -278}
+  - name: Bottom Piece
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 285
+      y: 934
+      width: 117
+      height: 50
+    spriteID: fb8666c2215c3224281856b7f3dae88e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -366, y: -67}
+  - name: Body
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 426
+      y: 4
+      width: 313
+      height: 312
+    spriteID: 4f55e69deea6b784b9a4cba73644c7db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -134, y: -1012}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  padding: 4
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Gun Outline
+    spriteName: Gun Outline
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a2236ebb99dfe10448905b0f53304842
+    layerID: 18
+    mosaicPosition: {x: 747, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gun
+    spriteName: Gun
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9bff1f5187343e6488d0b7e618bbff74
+    layerID: 17
+    mosaicPosition: {x: 4, y: 976}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Top Piece
+    spriteName: Top Piece
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a9f23ed176d693041add6c9ab7c32a8f
+    layerID: 16
+    mosaicPosition: {x: 161, y: 944}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Top HL
+    spriteName: Top HL
+    isGroup: 0
+    parentIndex: -1
+    spriteID: da52c2794d4db5449ae3fa42321f3ac0
+    layerID: 15
+    mosaicPosition: {x: 285, y: 992}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Attachment HL
+    spriteName: Attachment HL
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 418b1a6419e237e4b9080b2379b45784
+    layerID: 14
+    mosaicPosition: {x: 747, y: 324}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: 'Attachment '
+    spriteName: 'Attachment '
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 36e21d4cc56e73541aa39b1ee3e9eaae
+    layerID: 13
+    mosaicPosition: {x: 907, y: 324}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Shadow
+    spriteName: Shadow
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8ca8cf28ef9ea4d47a2f25f43b4de162
+    layerID: 12
+    mosaicPosition: {x: 917, y: 390}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Bottom HL
+    spriteName: Bottom HL
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 35763ab90576c624b9e01e1cef1377fc
+    layerID: 11
+    mosaicPosition: {x: 734, y: 390}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Dotted Line
+    spriteName: Dotted Line
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cb071797bc0d46a4ca1206f8ac8341ca
+    layerID: 10
+    mosaicPosition: {x: 426, y: 390}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: 'White Circle '
+    spriteName: 'White Circle '
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 27565bebb181fea428e80cd7c1db3467
+    layerID: 9
+    mosaicPosition: {x: 381, y: 992}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Red Circle
+    spriteName: Red Circle
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2e25f4190cc106b45ad7539e7ffbdac3
+    layerID: 8
+    mosaicPosition: {x: 285, y: 819}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: White Circle Outline
+    spriteName: White Circle Outline
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1d2819f0c1e65a945ad954b7659922bb
+    layerID: 7
+    mosaicPosition: {x: 161, y: 819}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gray Middle Line
+    spriteName: Gray Middle Line
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cbc55bb4a25270a47b0cf9d4f806d041
+    layerID: 6
+    mosaicPosition: {x: 426, y: 324}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: White Middle Line
+    spriteName: White Middle Line
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ba11960f192f2444b82fe7802a8268a4
+    layerID: 5
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gray Circle
+    spriteName: Gray Circle
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a74c5908105782143b1e44d7fe0ec60e
+    layerID: 4
+    mosaicPosition: {x: 4, y: 819}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Bottom Piece
+    spriteName: Bottom Piece
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fb8666c2215c3224281856b7f3dae88e
+    layerID: 3
+    mosaicPosition: {x: 285, y: 934}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Body
+    spriteName: Body
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4f55e69deea6b784b9a4cba73644c7db
+    layerID: 2
+    mosaicPosition: {x: 426, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Background
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 76877d21e6c92dc448fa903d10e69989
+    layerID: 1
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
