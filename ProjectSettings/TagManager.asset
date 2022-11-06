@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Platform
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -11,8 +13,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Enemy
+  - Ground
   - 
   - 
   - 
@@ -38,6 +40,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Backgrounds
+    uniqueID: 1981886389
+    locked: 0
+  - name: StaticObjects
+    uniqueID: 340447403
+    locked: 0
+  - name: InteractableObjects
+    uniqueID: 3419029951
+    locked: 0
+  - name: Enemy
+    uniqueID: 778950761
+    locked: 0
+  - name: Player
+    uniqueID: 4290665307
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
