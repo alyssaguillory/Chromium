@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb2D;
     public Animator animator;
     public bool spacebar;
-    
+   
+
     public float speed;
     public float jumpForce;
     private float moveInput;
@@ -32,7 +34,6 @@ public class PlayerController : MonoBehaviour
     {
         //this is where we get the different components, and need to initialize new components we might use
         rb2D = GetComponent<Rigidbody2D>();
-        respawnPoint = transform.position;
         
     }
 
@@ -46,17 +47,16 @@ public class PlayerController : MonoBehaviour
         isFighting = Input.GetKey(KeyCode.Mouse0);
         */
         //Make player move slower when not grounded
-        
+
         //Mirros the positions of the robot
-        if (moveInput > 0) {transform.eulerAngles = new Vector3(0, 0, 0);}
-        else if (moveInput < 0) {transform.eulerAngles = new Vector3(0, 180, 0);}
+        //if (moveInput > 0) {transform.eulerAngles = new Vector3(0, 0, 0);}
+        //else if (moveInput < 0) {transform.eulerAngles = new Vector3(0, 180, 0); buzzSaw.transform.eulerAngles = new Vector3(0, 180, 0); }
         //Adds to the velocity of the robot
-         Vector2 force = new Vector2(moveInput * speed, 0);
+        Vector2 force = new Vector2(moveInput * speed, 0);
         if (!isGrounded) { force = force * 0.5f; }
         rb2D.AddForce(force);
         if(rb2D.velocity.x > MaxSpeed) { rb2D.velocity = new Vector2(MaxSpeed, rb2D.velocity.y); }
         else if (rb2D.velocity.x < -MaxSpeed) { rb2D.velocity = new Vector2(-MaxSpeed, rb2D.velocity.y); }
-        rb2D.velocity = new Vector2(moveInput * speed, rb2D.velocity.y);
         //Impulse
         //How do I cap the velocity
         //Applying forces?
@@ -138,11 +138,10 @@ public class PlayerController : MonoBehaviour
             transform.position = respawnPoint;
            
             
-        } else if (collision.tag = "checkpoint"){
+        } else if (collision.tag == "Checkpoint"){
             respawnPoint = transform.position;
         }
     }
-    
 
 
 }

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class HealthController : MonoBehaviour
 {
     public int playerHealth;
+    public GameObject corpse;
     [SerializeField] private Image[] gears;
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,8 @@ public class HealthController : MonoBehaviour
 
             }
         }
+
+       
         
     }
 }
