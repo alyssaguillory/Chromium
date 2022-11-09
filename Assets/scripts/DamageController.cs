@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DamageController : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class DamageController : MonoBehaviour
             Damage();
 
         }
+        
 
    }
 
@@ -26,7 +28,10 @@ public class DamageController : MonoBehaviour
     animator.SetTrigger("isHit");
     _healthController.playerHealth = _healthController.playerHealth-touchDamage;
     _healthController.UpdateHealth();
-    gameObject.SetActive(false);
+    if(_healthController.playerHealth == 0){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    //gameObject.SetActive(false);
    }
 
 }
