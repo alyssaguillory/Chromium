@@ -6,21 +6,20 @@ TagManager:
   tags:
   - Platform
   - Ground
-  - Rope
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
-  - EnemyClip
-  - EnemyNoClip
-  - Player
-  - Corpse
-  - Weapon
-  - HazardClip
-  - HazardNoClip
+  - Enemy
+  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
