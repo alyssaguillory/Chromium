@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ScanbotAI : MonoBehaviour
@@ -17,13 +15,15 @@ public class ScanbotAI : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
 
+    private EnemyPatrol enemyPatrol;
     private Animator anim;
 
 
 
     private void Awake()
     {
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
+        enemyPatrol = GetComponentInParent<EnemyPatrol>();
     }
 
     private void Update()
@@ -36,21 +36,25 @@ public class ScanbotAI : MonoBehaviour
             if (cooldownTimer > attackCooldown)
             {
                 cooldownTimer = 0;
+                anim.SetTrigger("rangedAttack");
                 
-                //anim.SetTrigger(" **Name of attack animation goes here** ");
             }
-        }
 
+        }
+        if (enemyPatrol != null)
+        {
+            enemyPatrol.enabled = !PlayerInSight();
+        }
     }
 
     private bool PlayerInSight()
     {
-        RaycastHit2D hit = 
+        RaycastHit2D hit =
             Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y * range, boxCollider.bounds.size.z), 
+            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y * range, boxCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
 
-        if(hit.collider != null)
+        if (hit.collider != null)
         {
             //player's health takes damage 
         }
@@ -63,13 +67,5 @@ public class ScanbotAI : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y * range, boxCollider.bounds.size.z));
-    }
-
-    private void DamagePlayer()
-    {
-        if (PlayerInSight())
-        {
-            //Damage player health
-        }
     }
 }
