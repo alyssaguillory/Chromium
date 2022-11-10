@@ -36,6 +36,7 @@ public class LaserBoss : MonoBehaviour
         {
             
             Laser.SetActive(true); 
+            Debug.Log("hit");
 
         }else if(collision.tag == "fuse2")
         {
