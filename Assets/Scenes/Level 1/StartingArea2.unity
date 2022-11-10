@@ -9263,7 +9263,7 @@ MonoBehaviour:
   animator: {fileID: 1050258801}
   spacebar: 0
   speed: 300
-  jumpForce: 80
+  jumpForce: 90
   isGrounded: 0
   isFighting: 0
   feetPos: {fileID: 1799670039}

@@ -60,14 +60,15 @@ public class LaserBoss : MonoBehaviour
         m_LineRenderer.SetPosition(0,laserFirePoint.position);
         m_LineRenderer.SetPosition(1,laserFirePoint.position);
         
-        if(hit) 
+        /*if(hit) 
         {
             m_LineRenderer.SetPosition(1,hit.point);
             _healthController.playerHealth -= 1; 
         }
         else{
             m_LineRenderer.SetPosition(1,transform.right*100);
-        }
+        }*/
+        m_LineRenderer.SetPosition(1,transform.right*100);
         
     }
     

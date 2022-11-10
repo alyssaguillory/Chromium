@@ -17363,7 +17363,7 @@ MonoBehaviour:
   animator: {fileID: 2091520091}
   spacebar: 0
   speed: 300
-  jumpForce: 80
+  jumpForce: 100
   isGrounded: 0
   isFighting: 0
   feetPos: {fileID: 735753390}
