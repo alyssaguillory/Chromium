@@ -9423,7 +9423,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 74.75937, y: 146.4189}
+  m_Size: {x: 79.002594, y: 165.90552}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -9437,7 +9437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273422480}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 111.154236, y: 159.34607, z: 14.986585}
+  m_LocalPosition: {x: 111.0096, y: 160.0791, z: 14.986585}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12584,7 +12584,7 @@ GameObject:
   - component: {fileID: 1648962969}
   - component: {fileID: 1648962971}
   - component: {fileID: 1648962970}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: chasm floor
   m_TagString: Platform
   m_Icon: {fileID: 0}
