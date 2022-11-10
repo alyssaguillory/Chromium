@@ -658,11 +658,12 @@ GameObject:
   - component: {fileID: 353346982}
   - component: {fileID: 353346981}
   - component: {fileID: 353346983}
+  - component: {fileID: 353346986}
   - component: {fileID: 353346985}
   - component: {fileID: 353346984}
   m_Layer: 7
   m_Name: heated platform
-  m_TagString: Untagged
+  m_TagString: fuse2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -744,8 +745,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.25778675, y: -4.0270424}
   m_SpriteTilingProperty:
@@ -780,7 +781,7 @@ PlatformEffector2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353346980}
-  m_Enabled: 1
+  m_Enabled: 0
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
@@ -792,6 +793,25 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &353346986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353346980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93793ee143e70294c95302dd61a9da14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defDistanceRay: 100
+  _healthController: {fileID: 1434018263}
+  laserFirePoint: {fileID: 2037234287}
+  m_LineRenderer: {fileID: 2037234290}
+  Laser: {fileID: 1473446267}
+  Laser2: {fileID: 1293435293}
+  Laser3: {fileID: 2037234286}
 --- !u!1 &358378659
 GameObject:
   m_ObjectHideFlags: 0
@@ -7093,11 +7113,12 @@ GameObject:
   - component: {fileID: 861703785}
   - component: {fileID: 861703784}
   - component: {fileID: 861703786}
+  - component: {fileID: 861703789}
   - component: {fileID: 861703788}
   - component: {fileID: 861703787}
   m_Layer: 7
   m_Name: heated platform (1)
-  m_TagString: Untagged
+  m_TagString: fuse3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7179,8 +7200,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.25778675, y: -4.0270424}
   m_SpriteTilingProperty:
@@ -7215,7 +7236,7 @@ PlatformEffector2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861703783}
-  m_Enabled: 1
+  m_Enabled: 0
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
@@ -7227,6 +7248,25 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &861703789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861703783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93793ee143e70294c95302dd61a9da14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defDistanceRay: 100
+  _healthController: {fileID: 1434018263}
+  laserFirePoint: {fileID: 1293435297}
+  m_LineRenderer: {fileID: 1293435296}
+  Laser: {fileID: 1473446267}
+  Laser2: {fileID: 1293435293}
+  Laser3: {fileID: 2037234286}
 --- !u!1 &863020871
 GameObject:
   m_ObjectHideFlags: 0
@@ -13642,7 +13682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1293435294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14576,8 +14616,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.25778675, y: -4.0270424}
   m_SpriteTilingProperty:
@@ -14612,7 +14652,7 @@ PlatformEffector2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492754417}
-  m_Enabled: 1
+  m_Enabled: 0
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
@@ -15197,8 +15237,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.25778675, y: -4.0270424}
   m_SpriteTilingProperty:
@@ -15233,7 +15273,7 @@ PlatformEffector2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698927604}
-  m_Enabled: 1
+  m_Enabled: 0
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
@@ -16090,7 +16130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2037234287
 Transform:
   m_ObjectHideFlags: 0
