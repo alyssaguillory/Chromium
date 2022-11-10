@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Kyara Scenes/2 _ 4. Vertical Room 2.unity
     guid: a912b555254e5a04b8c209856bdd9646
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level 1/3. Puzzle Room.unity
     guid: 2c5d7c657e276bf428ea772554584bcc
   - enabled: 1
