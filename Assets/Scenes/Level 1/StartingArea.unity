@@ -1186,7 +1186,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.000001013279, y: 0}
   m_SpriteTilingProperty:
@@ -2582,7 +2582,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0035700202, y: 0}
   m_SpriteTilingProperty:
@@ -4100,7 +4100,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434885997}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 52.28, y: -23.54, z: 2.8356907}
+  m_LocalPosition: {x: 184.6, y: -23.54, z: 2.8356907}
   m_LocalScale: {x: 2, y: 2.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6400,7 +6400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  levelName: 6. Arena
+  levelName: BossIncenerator
   been_there_flag: 0
 --- !u!212 &795985040
 SpriteRenderer:
@@ -7414,7 +7414,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.016456842, y: 0}
   m_SpriteTilingProperty:
@@ -10769,7 +10769,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.8131752}
+  m_Offset: {x: 0, y: -1.0914841}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10780,7 +10780,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.48, y: 90.36501}
+  m_Size: {x: 3.48, y: 88.92163}
   m_EdgeRadius: 0
 --- !u!212 &1413120491
 SpriteRenderer:
@@ -12861,7 +12861,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0035700202, y: 0}
   m_SpriteTilingProperty:
@@ -13628,7 +13628,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.642065}
+  m_Offset: {x: 0, y: 0.10518646}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -13639,7 +13639,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.48, y: 89.24461}
+  m_Size: {x: 3.48, y: 85.75011}
   m_EdgeRadius: 0
 --- !u!212 &1798893995
 SpriteRenderer:

@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
     public float jumpTime;
     private bool isJumping;
     public float MaxSpeed = 10.0f;
-    private Vector3 respawnPoint;
 
 
     // Start is called before the first frame update
