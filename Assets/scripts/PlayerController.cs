@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb2D;
     public Animator animator;
     public bool spacebar;
+   
 
     public float speed;
     public float jumpForce;
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public float jumpTime;
     private bool isJumping;
     public float MaxSpeed = 10.0f;
+    private Vector3 respawnPoint;
 
 
     // Start is called before the first frame update
@@ -50,7 +53,7 @@ public class PlayerController : MonoBehaviour
         //else if (moveInput < 0) {transform.eulerAngles = new Vector3(0, 180, 0); buzzSaw.transform.eulerAngles = new Vector3(0, 180, 0); }
         //Adds to the velocity of the robot
         Vector2 force = new Vector2(moveInput * speed, 0);
-        if (!isGrounded) { force = force * 0.7f; }
+        if (!isGrounded) { force = force * 0.5f; }
         rb2D.AddForce(force);
         if(rb2D.velocity.x > MaxSpeed) { rb2D.velocity = new Vector2(MaxSpeed, rb2D.velocity.y); }
         else if (rb2D.velocity.x < -MaxSpeed) { rb2D.velocity = new Vector2(-MaxSpeed, rb2D.velocity.y); }
@@ -128,6 +131,16 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.color = new Color(1, 1, 0, 0.75F);
         Gizmos.DrawSphere(feetPos.position, checkRadius);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "fallCollider"){
+            transform.position = respawnPoint;
+           
+            
+        } else if (collision.tag == "Checkpoint"){
+            respawnPoint = transform.position;
+        }
     }
 
 
