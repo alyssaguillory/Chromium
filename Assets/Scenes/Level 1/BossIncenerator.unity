@@ -401,7 +401,6 @@ GameObject:
   - component: {fileID: 281208193}
   - component: {fileID: 281208194}
   - component: {fileID: 281208195}
-  - component: {fileID: 281208196}
   m_Layer: 0
   m_Name: 'Large Main Back '
   m_TagString: fallCollider
@@ -502,25 +501,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 91.517845, y: 4.8238945}
   m_EdgeRadius: 0
---- !u!114 &281208196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 281208192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93793ee143e70294c95302dd61a9da14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defDistanceRay: 100
-  _healthController: {fileID: 0}
-  laserFirePoint: {fileID: 0}
-  m_LineRenderer: {fileID: 0}
-  Laser: {fileID: 0}
-  Laser2: {fileID: 0}
-  Laser3: {fileID: 0}
 --- !u!1 &285463588
 GameObject:
   m_ObjectHideFlags: 0
@@ -6752,7 +6732,6 @@ GameObject:
   - component: {fileID: 709247926}
   - component: {fileID: 709247925}
   - component: {fileID: 709247928}
-  - component: {fileID: 709247927}
   m_Layer: 7
   m_Name: white floor (2)
   m_TagString: fallCollider
@@ -6827,25 +6806,6 @@ Transform:
   m_Father: {fileID: 1361514436}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180.072}
---- !u!114 &709247927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 709247924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93793ee143e70294c95302dd61a9da14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defDistanceRay: 1000
-  _healthController: {fileID: 1434018263}
-  laserFirePoint: {fileID: 1293435297}
-  m_LineRenderer: {fileID: 1293435296}
-  Laser: {fileID: 1473446267}
-  Laser2: {fileID: 1293435293}
-  Laser3: {fileID: 2037234286}
 --- !u!61 &709247928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14573,7 +14533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defDistanceRay: 1000
   _healthController: {fileID: 1434018263}
-  laserFirePoint: {fileID: 474153533}
+  laserFirePoint: {fileID: 1473446268}
   m_LineRenderer: {fileID: 1473446271}
   Laser: {fileID: 1473446267}
   Laser2: {fileID: 1293435293}
@@ -15980,7 +15940,6 @@ GameObject:
   - component: {fileID: 1912781043}
   - component: {fileID: 1912781042}
   - component: {fileID: 1912781044}
-  - component: {fileID: 1912781045}
   m_Layer: 7
   m_Name: white floor (5)
   m_TagString: fallCollider
@@ -16081,25 +16040,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 40, y: 40}
   m_EdgeRadius: 0
---- !u!114 &1912781045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912781041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93793ee143e70294c95302dd61a9da14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defDistanceRay: 1000
-  _healthController: {fileID: 1434018263}
-  laserFirePoint: {fileID: 1293435297}
-  m_LineRenderer: {fileID: 1293435296}
-  Laser: {fileID: 1473446267}
-  Laser2: {fileID: 1293435293}
-  Laser3: {fileID: 2037234286}
 --- !u!1 &1915382923
 GameObject:
   m_ObjectHideFlags: 0

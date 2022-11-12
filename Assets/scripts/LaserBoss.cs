@@ -33,6 +33,12 @@ public class LaserBoss : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
    {
+        if (collision.CompareTag("fallCollider")){
+            Debug.Log("fell");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+
+        }
         if(collision.tag == "fuse1")
         {
             
@@ -46,7 +52,8 @@ public class LaserBoss : MonoBehaviour
         }else if (collision.tag == "fuse3")
         {
             Laser3.SetActive(true); 
-        }else if (collision.tag =="fallCollider"){
+        }
+         if (collision.CompareTag("fallCollider")){
             Debug.Log("fell");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
