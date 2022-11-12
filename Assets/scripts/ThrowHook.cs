@@ -8,9 +8,9 @@ public class ThrowHook : MonoBehaviour
 	public GameObject hook;
 
 
-	public bool ropeActive;
+	public bool currActive;
 
-	GameObject curHook;
+	public GameObject curHook;
 
 	// Use this for initialization
 	void Start()
@@ -24,11 +24,11 @@ public class ThrowHook : MonoBehaviour
 
 
 
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(1))
 		{
 
 
-			if (ropeActive == false)
+			if (curHook == null)
 			{
 				Vector2 destiny = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -39,20 +39,23 @@ public class ThrowHook : MonoBehaviour
 				//curHook.transform.SetParent(transform);
 
 
-				ropeActive = true;
+				RopeScript.ropeActive = true;
 			}
 			else
 			{
 
 				//delete rope
 
-				Destroy(curHook);
+				//Destroy(curHook);
+				curHook.GetComponent<RopeScript>().returning = true;
+				RopeScript.ropeActive = false;
+				//curHook.GetComponent<RopeScript>().Return();
 
 
-				ropeActive = false;
 
 			}
 		}
+
 
 
 	}
