@@ -10089,7 +10089,7 @@ SpriteRenderer:
   m_SortingLayerID: 1981886389
   m_SortingLayer: -5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5b95d070999f9e84da96d56ad39e1dfd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9787e5095e8663c4693e134a26027a88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10634,8 +10634,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 340447403
-  m_SortingLayer: -4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 378e4792e40d845028d771b5d26d767b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -31456,7 +31456,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702961966}
   serializedVersion: 8
-  lengthInSec: 6
+  lengthInSec: 2
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -31465,7 +31465,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -32447,7 +32447,7 @@ ParticleSystem:
       repeatInterval: 0.1
       probability: 1
     - serializedVersion: 2
-      time: 5
+      time: 2
       countCurve:
         serializedVersion: 2
         minMaxState: 0
@@ -32847,7 +32847,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 0.95686275, b: 0.9098039, a: 1}
-        key1: {r: 0.9433962, g: 0.93892217, b: 0.30704877, a: 0.39607844}
+        key1: {r: 0.9433962, g: 0.93892217, b: 0.30704877, a: 0}
         key2: {r: 0.9811321, g: 0.9680267, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -32863,7 +32863,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 15227
+        atime1: 13300
         atime2: 65535
         atime3: 0
         atime4: 0
@@ -35087,7 +35087,7 @@ ParticleSystem:
     separateAxes: 0
     range: {x: 0, y: 1}
   ColorBySpeedModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -36328,21 +36328,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 705996453}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67f435a1b98fe53448e6068f494dcc97, type: 3}
+  m_Script: {fileID: 11500000, guid: 1668a8426f3999845be23987fb911137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lights:
-  - {fileID: 474153531}
-  fires:
+  FireWalls:
   - {fileID: 1255389790}
   - {fileID: 1145309709}
   - {fileID: 1783960405}
   - {fileID: 702961966}
-  fireWarnings:
+  Warnings:
   - {fileID: 1568278209}
   - {fileID: 484665452}
   - {fileID: 469713529}
   - {fileID: 1204333520}
+  FireCount: 4
+  FireInterval: 5
 --- !u!1 &709247924
 GameObject:
   m_ObjectHideFlags: 0
@@ -36533,12 +36533,12 @@ SpriteRenderer:
   m_SortingLayerID: 1981886389
   m_SortingLayer: -5
   m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: 4834fee885a99d74587c0b6263d2502c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 103083c492f172f46b1c27aea725bbc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 3.48, y: 436.71982}
+  m_Size: {x: 3.48, y: 436}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -36816,8 +36816,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 340447403
-  m_SortingLayer: -4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 378e4792e40d845028d771b5d26d767b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -37824,7 +37824,7 @@ SpriteRenderer:
   m_SortingLayerID: 1981886389
   m_SortingLayer: -5
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: ec9637b1899ce5a429326f72263f9fba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e4ab30e717f9f1448272bc89a54a6e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
@@ -37950,7 +37950,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145309709}
   serializedVersion: 8
-  lengthInSec: 6
+  lengthInSec: 2
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -37959,7 +37959,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -38941,7 +38941,7 @@ ParticleSystem:
       repeatInterval: 0.1
       probability: 1
     - serializedVersion: 2
-      time: 5
+      time: 2
       countCurve:
         serializedVersion: 2
         minMaxState: 0
@@ -39341,7 +39341,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 0.95686275, b: 0.9098039, a: 1}
-        key1: {r: 0.9433962, g: 0.93892217, b: 0.30704877, a: 0.39607844}
+        key1: {r: 0.9433962, g: 0.93892217, b: 0.30704877, a: 0}
         key2: {r: 0.9811321, g: 0.9680267, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -39357,7 +39357,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 15227
+        atime1: 13300
         atime2: 65535
         atime3: 0
         atime4: 0
@@ -41581,7 +41581,7 @@ ParticleSystem:
     separateAxes: 0
     range: {x: 0, y: 1}
   ColorBySpeedModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -42849,7 +42849,7 @@ SpriteRenderer:
   m_SortingLayerID: 1981886389
   m_SortingLayer: -5
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: ec9637b1899ce5a429326f72263f9fba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e4ab30e717f9f1448272bc89a54a6e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
@@ -43023,7 +43023,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178798540}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73f348cc952dd0f46bd2d891af068e2e, type: 3}
   m_Name: 
@@ -53134,7 +53134,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3.48, y: 6.83}
-    newSize: {x: 3.48, y: 56.498898}
+    newSize: {x: 3.48, y: 56.49}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -53183,12 +53183,12 @@ SpriteRenderer:
   m_SortingLayerID: 340447403
   m_SortingLayer: -4
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 4834fee885a99d74587c0b6263d2502c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 103083c492f172f46b1c27aea725bbc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 3.48, y: 56.498898}
+  m_Size: {x: 3.48, y: 56.49}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -53340,7 +53340,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255389790}
   serializedVersion: 8
-  lengthInSec: 6
+  lengthInSec: 2
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -53349,7 +53349,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -54331,7 +54331,7 @@ ParticleSystem:
       repeatInterval: 0.1
       probability: 1
     - serializedVersion: 2
-      time: 5
+      time: 2
       countCurve:
         serializedVersion: 2
         minMaxState: 0
@@ -54731,7 +54731,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 0.95686275, b: 0.9098039, a: 1}
-        key1: {r: 0.9433962, g: 0.93892217, b: 0.30704877, a: 0.39607844}
+        key1: {r: 0.9433962, g: 0.93892217, b: 0.30704877, a: 0}
         key2: {r: 0.9811321, g: 0.9680267, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -54747,7 +54747,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 15227
+        atime1: 13300
         atime2: 65535
         atime3: 0
         atime4: 0
@@ -56971,7 +56971,7 @@ ParticleSystem:
     separateAxes: 0
     range: {x: 0, y: 1}
   ColorBySpeedModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -63762,6 +63762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 10
+  corpse: {fileID: 0}
   gears:
   - {fileID: 625467295}
   - {fileID: 387895109}
@@ -64041,8 +64042,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 340447403
-  m_SortingLayer: -4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 378e4792e40d845028d771b5d26d767b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -80297,8 +80298,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 340447403
-  m_SortingLayer: -4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 378e4792e40d845028d771b5d26d767b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -80581,7 +80582,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782338480}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.589962, y: -0.78521967, z: -2.3491247}
+  m_LocalPosition: {x: -29.589962, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -80628,13 +80629,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 340447403
   m_SortingLayer: -4
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 4834fee885a99d74587c0b6263d2502c, type: 3}
+  m_SortingOrder: 11
+  m_Sprite: {fileID: 21300000, guid: 103083c492f172f46b1c27aea725bbc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 3.48, y: 56.498898}
+  m_Size: {x: 3.48, y: 56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -80658,7 +80659,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3.48, y: 6.83}
-    newSize: {x: 3.48, y: 56.498898}
+    newSize: {x: 3.48, y: 56}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -80781,7 +80782,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783960405}
   serializedVersion: 8
-  lengthInSec: 6
+  lengthInSec: 2
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -80790,7 +80791,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -81772,7 +81773,7 @@ ParticleSystem:
       repeatInterval: 0.1
       probability: 1
     - serializedVersion: 2
-      time: 5
+      time: 2
       countCurve:
         serializedVersion: 2
         minMaxState: 0
@@ -82172,7 +82173,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 0.95686275, b: 0.9098039, a: 1}
-        key1: {r: 0.9433962, g: 0.93892217, b: 0.30704877, a: 0.39607844}
+        key1: {r: 0.9433962, g: 0.93892217, b: 0.30704877, a: 0}
         key2: {r: 0.9811321, g: 0.9680267, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -82188,7 +82189,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 15227
+        atime1: 13300
         atime2: 65535
         atime3: 0
         atime4: 0
@@ -84412,7 +84413,7 @@ ParticleSystem:
     separateAxes: 0
     range: {x: 0, y: 1}
   ColorBySpeedModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -85755,7 +85756,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843302725}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.19, y: -3.5, z: -2.3491247}
+  m_LocalPosition: {x: -26.19, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -85802,13 +85803,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 340447403
   m_SortingLayer: -4
-  m_SortingOrder: 12
-  m_Sprite: {fileID: 21300000, guid: 4834fee885a99d74587c0b6263d2502c, type: 3}
+  m_SortingOrder: 11
+  m_Sprite: {fileID: 21300000, guid: 103083c492f172f46b1c27aea725bbc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 3.48, y: 49.909164}
+  m_Size: {x: 3.48, y: 56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -85832,7 +85833,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3.48, y: 6.83}
-    newSize: {x: 3.48, y: 49.909164}
+    newSize: {x: 3.48, y: 56}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -86139,7 +86140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856920173}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.399963, y: -0.78521967, z: -2.3491247}
+  m_LocalPosition: {x: -29.399963, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86187,12 +86188,12 @@ SpriteRenderer:
   m_SortingLayerID: 340447403
   m_SortingLayer: -4
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 4834fee885a99d74587c0b6263d2502c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 103083c492f172f46b1c27aea725bbc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 3.48, y: 56.498898}
+  m_Size: {x: 3.48, y: 56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -86216,7 +86217,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3.48, y: 6.83}
-    newSize: {x: 3.48, y: 56.498898}
+    newSize: {x: 3.48, y: 56}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -86471,7 +86472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003024253}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26, y: -3.5, z: -2.3491247}
+  m_LocalPosition: {x: -26, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86519,12 +86520,12 @@ SpriteRenderer:
   m_SortingLayerID: 340447403
   m_SortingLayer: -4
   m_SortingOrder: 12
-  m_Sprite: {fileID: 21300000, guid: 4834fee885a99d74587c0b6263d2502c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 103083c492f172f46b1c27aea725bbc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 3.48, y: 49.909164}
+  m_Size: {x: 3.48, y: 56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -86548,7 +86549,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3.48, y: 6.83}
-    newSize: {x: 3.48, y: 49.909164}
+    newSize: {x: 3.48, y: 56}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -86845,6 +86846,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1716326102673621664, guid: ffd7e188f85c9d34b8fc31e92078cf0f, type: 3}
   m_PrefabInstance: {fileID: 1168212003118997667}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &569652437402968588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569652437402968579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69be7d66e06e2914e8302f6d68d9e614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hook: {fileID: 6450872736373503191, guid: 714151ac2f328a444beb5dcb7d5be96f, type: 3}
+  currActive: 0
+  curHook: {fileID: 0}
 --- !u!1001 &1168212003118997667
 PrefabInstance:
   m_ObjectHideFlags: 0
