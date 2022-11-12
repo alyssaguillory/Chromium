@@ -61,7 +61,9 @@ public class PlayerController : MonoBehaviour
         //How do I cap the velocity
         //Applying forces?
         //Check if the bot is on the ground and we are trying to jump. If so, then set us to jump.
-        if (isGrounded == true && jumpUp == 1.0f){
+        
+        
+        if (isGrounded == true && Input.GetKey(KeyCode.Space)){
             //Used for animation, need fixed
             Jump();
             //Used because I can't figure it out without it
@@ -73,6 +75,7 @@ public class PlayerController : MonoBehaviour
             //Used to start the upwards jump
             rb2D.velocity += new Vector2(0.0f, jumpForce);
         }
+        
         //While they are holding space down
         if (jumpUp == 1.0f && isJumping == true) {
             //if airtime has not run out
@@ -93,7 +96,8 @@ public class PlayerController : MonoBehaviour
     //Update is per frame and is where we fetch inputs and do non-physics stuff
     void Update(){
         //Check Grounds
-        isGrounded = Physics2D.OverlapCircle(feetPos.position,checkRadius, whatIsGround);
+        if(!Input.GetKey(KeyCode.Space)) { isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround); }
+        
         //Animation Stuff
         if(isGrounded && !isJumping) {
             animator.SetBool("isJumping", false);
