@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 281208193}
   - component: {fileID: 281208194}
   - component: {fileID: 281208195}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 'Large Main Back '
   m_TagString: fallCollider
   m_Icon: {fileID: 0}
