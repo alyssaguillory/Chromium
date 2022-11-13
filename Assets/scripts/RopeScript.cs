@@ -38,6 +38,7 @@ public class RopeScript : MonoBehaviour
 	RaycastHit2D hit;
 	public bool returning = false;
 	Vector2 missPoint;
+	float lifetime;
 
 	// Use this for initialization
 	void Start()
@@ -60,6 +61,7 @@ public class RopeScript : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		lifetime += Time.deltaTime;
 		if (hit.collider != null && ropeActive == true)
 		{
 
@@ -92,7 +94,7 @@ public class RopeScript : MonoBehaviour
 				lastNode.GetComponent<HingeJoint2D>().connectedBody = player.GetComponent<Rigidbody2D>();
 			}
 
-			if (Input.GetKey(KeyCode.W) && (Vector2)transform.position == hit.point)
+			if (Input.GetKey(KeyCode.W) && (Vector2)transform.position == hit.point && lifetime > 1.0f)
 			{
 				MoveUp();
 			}
