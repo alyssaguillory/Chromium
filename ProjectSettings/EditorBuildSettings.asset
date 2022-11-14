@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 1/StartingArea.unity
     guid: 7f9c91b67856f7f468bbc0bdfe965e56
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level 1/StartingArea2.unity
     guid: 34bad2a5f44807a4aaba81c8ff6ee669
   - enabled: 1

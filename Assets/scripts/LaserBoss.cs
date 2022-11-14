@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LaserBoss : MonoBehaviour
 {
@@ -32,11 +33,17 @@ public class LaserBoss : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
    {
+        if (collision.tag == "fallCollider"){
+            Debug.Log("fell");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+
+        }
         if(collision.tag == "fuse1")
         {
             
             Laser.SetActive(true); 
-            Debug.Log("hit");
+           
 
         }else if(collision.tag == "fuse2")
         {
@@ -45,6 +52,12 @@ public class LaserBoss : MonoBehaviour
         }else if (collision.tag == "fuse3")
         {
             Laser3.SetActive(true); 
+        }
+         if (collision.CompareTag("fallCollider")){
+            Debug.Log("fell");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+
         }
         
 

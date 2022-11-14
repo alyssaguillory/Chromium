@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class ScanbotAI : MonoBehaviour
 {
+    public GameObject ProjectilePrefab;
+    public Transform LaunchOffset; 
+    public HealthController _healthcontroller;
+
     [Header("Attack Parameter")]
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
@@ -9,14 +13,14 @@ public class ScanbotAI : MonoBehaviour
 
     [Header("Collider Parameters")]
     [SerializeField] private float colliderDistance;
-    [SerializeField] private BoxCollider2D boxCollider;
+    [SerializeField] private CircleCollider2D boxCollider;
 
     [Header("Player Layer")]
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
 
     private EnemyPatrol enemyPatrol;
-    private Animator anim;
+    public Animator anim;
 
 
 
@@ -37,6 +41,7 @@ public class ScanbotAI : MonoBehaviour
             {
                 cooldownTimer = 0;
                 anim.SetTrigger("rangedAttack");
+                Debug.Log("player seen"); 
                 
             }
 
@@ -56,7 +61,8 @@ public class ScanbotAI : MonoBehaviour
 
         if (hit.collider != null)
         {
-            //player's health takes damage 
+            Instantiate(ProjectilePrefab,LaunchOffset.position,transform.rotation); 
+            
         }
 
         return hit.collider != null;
