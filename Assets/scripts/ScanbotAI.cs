@@ -35,7 +35,7 @@ public class ScanbotAI : MonoBehaviour
     private void Update()
     {
         cooldownTimer += Time.deltaTime;
-
+        transform.position = startPos.position;
         //Attack only when player in sight
         if (PlayerInSight())
         {
