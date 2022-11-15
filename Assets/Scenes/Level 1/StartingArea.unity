@@ -4198,7 +4198,7 @@ Transform:
   - {fileID: 1962573088}
   - {fileID: 1168783971}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619411305
 GameObject:
@@ -4575,9 +4575,25 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 380096800, guid: 68b67425b4237044ab80e2fe9b8bceba, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 612765140, guid: 68b67425b4237044ab80e2fe9b8bceba, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091520092, guid: 68b67425b4237044ab80e2fe9b8bceba, type: 3}
+      propertyPath: RecoilForce.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091520092, guid: 68b67425b4237044ab80e2fe9b8bceba, type: 3}
+      propertyPath: RecoilForce.y
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 2091520098, guid: 68b67425b4237044ab80e2fe9b8bceba, type: 3}
       propertyPath: jumpForce
-      value: 78
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 2751675326543006543, guid: 68b67425b4237044ab80e2fe9b8bceba, type: 3}
       propertyPath: m_RootOrder
@@ -8498,7 +8514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   maxHealth: 3
-  corpse: {fileID: 1168783970}
+  corpse: {fileID: 1428837295}
 --- !u!114 &1168783974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9448,7 +9464,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351329939}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -125.5, y: 39, z: 2.8356907}
+  m_LocalPosition: {x: -125.5, y: 38.5, z: 2.8356907}
   m_LocalScale: {x: 5, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10771,6 +10787,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1428837295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1428837296}
+  m_Layer: 0
+  m_Name: EmptyCorpse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1428837296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428837295}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 266.68213, y: 106.44269, z: -6.5463405}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1441179742
 GameObject:
   m_ObjectHideFlags: 0
@@ -10883,7 +10930,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447364642}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -69, y: 39, z: 2.8356907}
+  m_LocalPosition: {x: -69, y: 38.5, z: 2.8356907}
   m_LocalScale: {x: 5, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13473,8 +13520,8 @@ GameObject:
   - component: {fileID: 1803128078}
   - component: {fileID: 1803128079}
   - component: {fileID: 1803128080}
-  - component: {fileID: 1803128082}
   - component: {fileID: 1803128081}
+  - component: {fileID: 1803128082}
   - component: {fileID: 1803128083}
   - component: {fileID: 1803128084}
   m_Layer: 7
@@ -13624,14 +13671,18 @@ MonoBehaviour:
   - {fileID: 744386075}
   - {fileID: 1515606471}
   - {fileID: 1111714189}
-  Dead: 0
-  jumpForce: 600
+  isStunned: 0
+  stunDur: 0
+  jumpForce: 500
   safeSpace: 15
-  activeArea: 30
+  activateArea: 30
   checkRadius: 1
+  Recharge: 2.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
+  State: 0
+  targetDistance: {x: 0, y: 0}
 --- !u!114 &1803128083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14169,7 +14220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   maxHealth: 3
-  corpse: {fileID: 1962573087}
+  corpse: {fileID: 1428837295}
 --- !u!95 &1962573091
 Animator:
   serializedVersion: 4
