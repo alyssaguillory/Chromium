@@ -11535,7 +11535,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 666341342}
-  offset: 10
+  Xoffset: 0
+  Yoffset: 12
   offsetSmoothing: 2
   MainCamera: {fileID: 1553260263}
 --- !u!81 &1553260265
