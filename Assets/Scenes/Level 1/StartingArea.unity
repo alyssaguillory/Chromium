@@ -8491,6 +8491,7 @@ MonoBehaviour:
   ProjectilePrefab: {fileID: 3031184480160645133, guid: 2a0c8aa423b9ee64cb596c8219499dd9, type: 3}
   LaunchOffset: {fileID: 1297002937}
   _healthcontroller: {fileID: 1295920145}
+  startPos: {fileID: 1168783971}
   attackCooldown: 2
   range: 10
   damage: 1
@@ -8514,7 +8515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   maxHealth: 3
-  corpse: {fileID: 1428837295}
+  corpse: {fileID: 1962573087}
 --- !u!114 &1168783974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9603,7 +9604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: a826834cf52ae1b43a41a2be6c61cccd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.9
+      value: 16.1
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: a826834cf52ae1b43a41a2be6c61cccd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14293,6 +14294,7 @@ MonoBehaviour:
   ProjectilePrefab: {fileID: 3031184480160645133, guid: 2a0c8aa423b9ee64cb596c8219499dd9, type: 3}
   LaunchOffset: {fileID: 528756906}
   _healthcontroller: {fileID: 1295920145}
+  startPos: {fileID: 1962573088}
   attackCooldown: 2
   range: 10
   damage: 1
