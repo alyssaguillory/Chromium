@@ -20,7 +20,7 @@ public class MouseAi : MonoBehaviour
 
     public SpriteRenderer[] ears;
 
-    bool isStunned = false;
+    public bool isStunned = false;
     bool isElectric = false;
     bool active = false;
     public float stunDur = 0.0f;
@@ -29,7 +29,7 @@ public class MouseAi : MonoBehaviour
     
     public float jumpForce = 100.0f;
     public float safeSpace = 1.0f;
-    public float outerEdge = 2.5f;
+    //public float outerEdge = 2.5f;
     public float activateArea = 5.0f;
     public float checkRadius = 1.0f;
     public float Recharge = 2.5f;
@@ -193,7 +193,7 @@ public class MouseAi : MonoBehaviour
             Recharge = 2.5f;
             return;
         }
-        if (rb.gameObject.GetComponent<Collider2D>().bounds.Intersects(target.gameObject.GetComponent<Collider2D>().bounds))
+        if (rb.gameObject.GetComponent<Collider2D>().bounds.Intersects(target.gameObject.GetComponent<Collider2D>().bounds) && !dealtDamage)
         {
             Debug.Log("Bounds intersecting");
             dealtDamage = true;

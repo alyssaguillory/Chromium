@@ -17,6 +17,7 @@ public class PlayerCombat : MonoBehaviour
     public LayerMask enemyLayers;
 
     public int attackDamage = 40;
+    [SerializeField] Vector2 RecoilForce = new Vector2(1, 0);
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -40,9 +41,10 @@ public class PlayerCombat : MonoBehaviour
             sawBlade.localPosition = sawBlade.localPosition + ((Vector3)toHitSpot + (Vector3)start - sawBlade.localPosition) * Time.deltaTime * 8;
             buzzSaw.Rotate(0.0f, 0.0f, 5.0f);
             animator.SetBool("isFighting", true);
+            sawBlade.gameObject.GetComponent<CircleCollider2D>().enabled = true;
             Attack();
         }
-        else { sawBlade.localPosition = (Vector2)sawBlade.localPosition - ((Vector2)sawBlade.localPosition - start) * Time.deltaTime * 2; }
+        else { sawBlade.localPosition = (Vector2)sawBlade.localPosition - ((Vector2)sawBlade.localPosition - start) * Time.deltaTime * 2; sawBlade.gameObject.GetComponent<CircleCollider2D>().enabled = false; }
 
     }
     void Attack()
@@ -62,6 +64,24 @@ public class PlayerCombat : MonoBehaviour
     {
         Gizmos.color = new Color(1, 1, 0, 0.75F);
         Gizmos.DrawSphere(sawBlade.position, attackRange);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<Rigidbody2D>() != null)
+        {
+            Vector2 RecoilVector = collision.gameObject.GetComponent<Transform>().position - sawBlade.position;
+            RecoilVector = RecoilVector.normalized * 300;
+            if(RecoilVector.y < 0)
+            {
+                RecoilVector = new Vector2(RecoilVector.x, RecoilVector.y*-2);
+            }
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(RecoilVector);
+            if (collision.gameObject.GetComponent<Enemy>() != null)
+            {
+                Debug.Log("Enemy has been hit!");
+                collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
+            }
+        }
     }
 
 }
