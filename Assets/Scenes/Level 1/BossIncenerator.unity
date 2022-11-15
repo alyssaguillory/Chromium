@@ -136,9 +136,10 @@ GameObject:
   - component: {fileID: 123983000}
   - component: {fileID: 123983002}
   - component: {fileID: 123983001}
+  - component: {fileID: 123983003}
   m_Layer: 6
   m_Name: Fuse box
-  m_TagString: Enemy
+  m_TagString: fuse1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,7 +239,7 @@ PlatformEffector2D:
     serializedVersion: 2
     m_Bits: 0
   m_RotationalOffset: 0
-  m_UseOneWay: 1
+  m_UseOneWay: 0
   m_UseOneWayGrouping: 0
   m_SurfaceArc: 180
   m_UseSideFriction: 0
@@ -269,6 +270,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 8.69, y: 12.5}
+  m_EdgeRadius: 0
+--- !u!61 &123983003
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123982997}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 20, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 40, y: 40}
+    newSize: {x: 40, y: 40}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20, y: 40}
   m_EdgeRadius: 0
 --- !u!1 &246019655
 GameObject:
@@ -373,9 +400,10 @@ GameObject:
   m_Component:
   - component: {fileID: 281208193}
   - component: {fileID: 281208194}
-  m_Layer: 0
+  - component: {fileID: 281208195}
+  m_Layer: 6
   m_Name: 'Large Main Back '
-  m_TagString: Untagged
+  m_TagString: fallCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -447,6 +475,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &281208195
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281208192}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.41527176, y: -8}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.96, y: 4.99}
+    newSize: {x: 100, y: 20}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 91.517845, y: 4.8238945}
+  m_EdgeRadius: 0
 --- !u!1 &285463588
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,12 +712,11 @@ GameObject:
   - component: {fileID: 353346982}
   - component: {fileID: 353346981}
   - component: {fileID: 353346983}
-  - component: {fileID: 353346986}
   - component: {fileID: 353346985}
   - component: {fileID: 353346984}
   m_Layer: 7
   m_Name: heated platform
-  m_TagString: fuse2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -745,8 +798,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0.25778675, y: -4.0270424}
   m_SpriteTilingProperty:
@@ -781,7 +834,7 @@ PlatformEffector2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353346980}
-  m_Enabled: 0
+  m_Enabled: 1
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
@@ -793,25 +846,6 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!114 &353346986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353346980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93793ee143e70294c95302dd61a9da14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defDistanceRay: 100
-  _healthController: {fileID: 1434018263}
-  laserFirePoint: {fileID: 2037234287}
-  m_LineRenderer: {fileID: 2037234290}
-  Laser: {fileID: 1473446267}
-  Laser2: {fileID: 1293435293}
-  Laser3: {fileID: 2037234286}
 --- !u!1 &358378659
 GameObject:
   m_ObjectHideFlags: 0
@@ -6041,7 +6075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a300c6b2f3c7146be605bc6c00d3b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationSpeed: 50
+  RotationSpeed: 10
   ClockwiseRotation: 0
 --- !u!1 &519420028
 GameObject:
@@ -6182,7 +6216,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f3cbd89d3d7c45e4d9ef804e8ae1ebb9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6205,10 +6239,10 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 10, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 2
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -6226,8 +6260,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.9245283, g: 0.039248828, b: 0.039248828, a: 1}
-      key1: {r: 0.9245283, g: 0.039248828, b: 0.039248828, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -6261,7 +6295,7 @@ LineRenderer:
     shadowBias: 0.5
     generateLightingData: 0
   m_MaskInteraction: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
 --- !u!114 &521207156
@@ -6697,9 +6731,10 @@ GameObject:
   m_Component:
   - component: {fileID: 709247926}
   - component: {fileID: 709247925}
+  - component: {fileID: 709247928}
   m_Layer: 7
   m_Name: white floor (2)
-  m_TagString: Untagged
+  m_TagString: fallCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6771,6 +6806,32 @@ Transform:
   m_Father: {fileID: 1361514436}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180.072}
+--- !u!61 &709247928
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709247924}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 40, y: 40}
+    newSize: {x: 40, y: 40}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 40, y: 40}
+  m_EdgeRadius: 0
 --- !u!1 &714783805
 GameObject:
   m_ObjectHideFlags: 0
@@ -6968,9 +7029,10 @@ GameObject:
   - component: {fileID: 849081526}
   - component: {fileID: 849081528}
   - component: {fileID: 849081527}
+  - component: {fileID: 849081529}
   m_Layer: 6
   m_Name: Fuse box (3)
-  m_TagString: Enemy
+  m_TagString: fuse3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7086,7 +7148,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 1.2, y: 1.04}
@@ -7102,6 +7164,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.69, y: 12.5}
   m_EdgeRadius: 0
+--- !u!61 &849081529
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849081523}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -20, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 40, y: 40}
+    newSize: {x: 40, y: 40}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20, y: 40}
+  m_EdgeRadius: 0
 --- !u!1 &861703783
 GameObject:
   m_ObjectHideFlags: 0
@@ -7113,12 +7201,11 @@ GameObject:
   - component: {fileID: 861703785}
   - component: {fileID: 861703784}
   - component: {fileID: 861703786}
-  - component: {fileID: 861703789}
   - component: {fileID: 861703788}
   - component: {fileID: 861703787}
   m_Layer: 7
   m_Name: heated platform (1)
-  m_TagString: fuse3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7200,8 +7287,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0.25778675, y: -4.0270424}
   m_SpriteTilingProperty:
@@ -7236,7 +7323,7 @@ PlatformEffector2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861703783}
-  m_Enabled: 0
+  m_Enabled: 1
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
@@ -7248,25 +7335,6 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!114 &861703789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861703783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93793ee143e70294c95302dd61a9da14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defDistanceRay: 100
-  _healthController: {fileID: 1434018263}
-  laserFirePoint: {fileID: 1293435297}
-  m_LineRenderer: {fileID: 1293435296}
-  Laser: {fileID: 1473446267}
-  Laser2: {fileID: 1293435293}
-  Laser3: {fileID: 2037234286}
 --- !u!1 &863020871
 GameObject:
   m_ObjectHideFlags: 0
@@ -7575,7 +7643,7 @@ GameObject:
   - component: {fileID: 1047799257}
   m_Layer: 0
   m_Name: Flame
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7618,7 +7686,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 109826893
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 58f51b41f6162451aa8aaabcbbfe8bcc, type: 3}
@@ -13498,6 +13566,7 @@ GameObject:
   - component: {fileID: 1275727489}
   - component: {fileID: 1275727491}
   - component: {fileID: 1275727490}
+  - component: {fileID: 1275727492}
   m_Layer: 6
   m_Name: Fuse box (2)
   m_TagString: fuse3
@@ -13600,7 +13669,7 @@ PlatformEffector2D:
     serializedVersion: 2
     m_Bits: 0
   m_RotationalOffset: 0
-  m_UseOneWay: 1
+  m_UseOneWay: 0
   m_UseOneWayGrouping: 0
   m_SurfaceArc: 180
   m_UseSideFriction: 0
@@ -13616,7 +13685,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 1.2, y: 1.04}
@@ -13631,6 +13700,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 8.69, y: 12.5}
+  m_EdgeRadius: 0
+--- !u!61 &1275727492
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275727486}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 20, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 40, y: 40}
+    newSize: {x: 40, y: 40}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20, y: 40}
   m_EdgeRadius: 0
 --- !u!1 &1288748363
 GameObject:
@@ -13712,9 +13807,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defDistanceRay: 1000
   _healthController: {fileID: 1434018263}
-  laserFirePoint: {fileID: 1293435297}
+  laserFirePoint: {fileID: 474153533}
   m_LineRenderer: {fileID: 1293435296}
-  Laser: {fileID: 521207153}
+  Laser: {fileID: 1473446267}
   Laser2: {fileID: 1293435293}
   Laser3: {fileID: 2037234286}
 --- !u!120 &1293435296
@@ -13738,7 +13833,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f3cbd89d3d7c45e4d9ef804e8ae1ebb9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13761,10 +13856,10 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 10, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 2
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -13782,8 +13877,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.9245283, g: 0.039248828, b: 0.039248828, a: 1}
-      key1: {r: 0.9245283, g: 0.039248828, b: 0.039248828, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -13817,7 +13912,7 @@ LineRenderer:
     shadowBias: 0.5
     generateLightingData: 0
   m_MaskInteraction: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
 --- !u!4 &1293435297
@@ -13989,6 +14084,7 @@ GameObject:
   - component: {fileID: 1379987585}
   - component: {fileID: 1379987587}
   - component: {fileID: 1379987586}
+  - component: {fileID: 1379987588}
   m_Layer: 6
   m_Name: Fuse box (1)
   m_TagString: fuse2
@@ -14091,7 +14187,7 @@ PlatformEffector2D:
     serializedVersion: 2
     m_Bits: 0
   m_RotationalOffset: 0
-  m_UseOneWay: 1
+  m_UseOneWay: 0
   m_UseOneWayGrouping: 0
   m_SurfaceArc: 180
   m_UseSideFriction: 0
@@ -14107,7 +14203,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 1.2, y: 1.04}
@@ -14122,6 +14218,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 8.69, y: 12.5}
+  m_EdgeRadius: 0
+--- !u!61 &1379987588
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379987582}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -20, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 40, y: 40}
+    newSize: {x: 40, y: 40}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20, y: 40}
   m_EdgeRadius: 0
 --- !u!1 &1385372088
 GameObject:
@@ -14366,7 +14488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1473446268
 Transform:
   m_ObjectHideFlags: 0
@@ -14375,7 +14497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473446267}
   m_LocalRotation: {x: 0, y: -0, z: 0, w: -1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.8, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14413,7 +14535,7 @@ MonoBehaviour:
   _healthController: {fileID: 1434018263}
   laserFirePoint: {fileID: 1473446268}
   m_LineRenderer: {fileID: 1473446271}
-  Laser: {fileID: 521207153}
+  Laser: {fileID: 1473446267}
   Laser2: {fileID: 1293435293}
   Laser3: {fileID: 1473446267}
 --- !u!120 &1473446271
@@ -14437,7 +14559,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f3cbd89d3d7c45e4d9ef804e8ae1ebb9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14460,10 +14582,10 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 10, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 2
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -14481,8 +14603,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.9245283, g: 0.039248828, b: 0.039248828, a: 1}
-      key1: {r: 0.9245283, g: 0.039248828, b: 0.039248828, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -14516,7 +14638,7 @@ LineRenderer:
     shadowBias: 0.5
     generateLightingData: 0
   m_MaskInteraction: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
 --- !u!1 &1492754417
@@ -14616,8 +14738,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0.25778675, y: -4.0270424}
   m_SpriteTilingProperty:
@@ -14652,7 +14774,7 @@ PlatformEffector2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492754417}
-  m_Enabled: 0
+  m_Enabled: 1
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
@@ -15237,8 +15359,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0.25778675, y: -4.0270424}
   m_SpriteTilingProperty:
@@ -15273,7 +15395,7 @@ PlatformEffector2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698927604}
-  m_Enabled: 0
+  m_Enabled: 1
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
@@ -15817,9 +15939,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1912781043}
   - component: {fileID: 1912781042}
+  - component: {fileID: 1912781044}
   m_Layer: 7
   m_Name: white floor (5)
-  m_TagString: Untagged
+  m_TagString: fallCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15891,6 +16014,32 @@ Transform:
   m_Father: {fileID: 1361514436}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180.072}
+--- !u!61 &1912781044
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912781041}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 40, y: 40}
+    newSize: {x: 40, y: 40}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 40, y: 40}
+  m_EdgeRadius: 0
 --- !u!1 &1915382923
 GameObject:
   m_ObjectHideFlags: 0
@@ -16175,9 +16324,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defDistanceRay: 1000
   _healthController: {fileID: 1434018263}
-  laserFirePoint: {fileID: 2037234287}
+  laserFirePoint: {fileID: 474153533}
   m_LineRenderer: {fileID: 2037234290}
-  Laser: {fileID: 521207153}
+  Laser: {fileID: 1473446267}
   Laser2: {fileID: 1293435293}
   Laser3: {fileID: 2037234286}
 --- !u!120 &2037234290
@@ -16201,7 +16350,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f3cbd89d3d7c45e4d9ef804e8ae1ebb9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16224,10 +16373,10 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 10, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 2
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -16245,8 +16394,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.9245283, g: 0.039248828, b: 0.039248828, a: 1}
-      key1: {r: 0.9245283, g: 0.039248828, b: 0.039248828, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -16280,7 +16429,7 @@ LineRenderer:
     shadowBias: 0.5
     generateLightingData: 0
   m_MaskInteraction: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
 --- !u!1 &2048321192
@@ -16586,8 +16735,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defDistanceRay: 1000
   _healthController: {fileID: 1434018263}
-  laserFirePoint: {fileID: 521207154}
-  m_LineRenderer: {fileID: 521207155}
+  laserFirePoint: {fileID: 1473446268}
+  m_LineRenderer: {fileID: 1473446271}
   Laser: {fileID: 521207153}
   Laser2: {fileID: 1293435293}
   Laser3: {fileID: 2037234286}
