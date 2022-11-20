@@ -5,7 +5,8 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public GameObject player;
-    public float offset;
+    public float Xoffset;
+    public float Yoffset;
     public float offsetSmoothing;
     private Vector3 playerPosition;
     public GameObject MainCamera;
@@ -18,7 +19,8 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerPosition = new Vector3(player.transform.position.x,player.transform.position.y+16,MainCamera.transform.position.z);
+        playerPosition = new Vector3(player.transform.position.x + Xoffset,player.transform.position.y + Yoffset,MainCamera.transform.position.z);
+        /*
         if(player.transform.localScale.x > 0)
         {
             playerPosition = new Vector3(playerPosition.x + offset, playerPosition.y, playerPosition.z);
@@ -26,6 +28,7 @@ public class CameraController : MonoBehaviour
             playerPosition = new Vector3(playerPosition.x - offset, playerPosition.y, playerPosition.z);
 
         }
+        */
         MainCamera.transform.position = Vector3.Lerp(transform.position, playerPosition,offsetSmoothing *Time.deltaTime);
     }
 }

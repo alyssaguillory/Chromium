@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class DamageController : MonoBehaviour
 {
-   public Animator animator; 
+   public Animator animator;
+    private float timer = 0.25f;
     // Start is called before the first frame update
    [SerializeField] private int touchDamage;
 
@@ -13,9 +14,10 @@ public class DamageController : MonoBehaviour
 
    private void OnTriggerEnter2D(Collider2D collision)
    {
+        timer -= Time.deltaTime;
         if(collision.CompareTag("Player"))
         {
-            
+            timer = 0.25f;
             Damage();
 
         }
@@ -25,7 +27,7 @@ public class DamageController : MonoBehaviour
 
    void Damage()
    {
-    animator.SetTrigger("isHit");
+    //animator.SetTrigger("isHit");
     _healthController.playerHealth = _healthController.playerHealth-touchDamage;
     _healthController.UpdateHealth();
     if(_healthController.playerHealth == 0){
