@@ -39,6 +39,13 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
     }
 
+    public void Controls()
+    {
+        Debug.Log("PauseMenu -> Button Clicked -> Controls");
+        controlsUI.SetActive(true);
+        pauseMenuUI.SetActive(false);
+    }
+
     public void Home(/*int sceneID*/)
     {
         Debug.Log("PauseMenu -> Button Clicked -> Home");
