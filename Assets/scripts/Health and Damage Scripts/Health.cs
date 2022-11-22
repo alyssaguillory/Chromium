@@ -38,11 +38,12 @@ public class Health : MonoBehaviour
     public IEnumerator DamageWithInvincible(float Iframes, float damage)
     {
         if (Iframe > 0)
-            return;
+            yield break;
         Iframe = Iframes;
         while (Iframe > 0)
         {
-            Debug.log("Invincibility Count Down");
+            Debug.Log("Invincibility Count Down");
+            Debug.Log(Iframe);
             Iframe -= Time.deltaTime;
             yield return null;
         }

@@ -58,9 +58,9 @@ public class PlayerCombat : MonoBehaviour
                 Debug.Log("Enemy has been hit!");
                 enemy.GetComponent<Enemy>().TakeDamage(1);
             }
-            if(enemy.GetComponent<Health>() != null && enemy.GameObject.tag != "Player")
+            if(enemy.GetComponent<Health>() != null && enemy.gameObject.tag != "Player")
             {
-                enemy.GetComponent<Health>().Damage(1);
+                //enemy.GetComponent<Health>().Damage(1);
                 StartCoroutine(enemy.GetComponent<Health>().DamageWithInvincible(0.5f, 1.0f));
             }
         }
