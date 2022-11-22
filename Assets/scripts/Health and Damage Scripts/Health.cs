@@ -13,8 +13,9 @@ public class Health : MonoBehaviour
     {
         if (Iframe > 0)
             return;
-        else
-            StartCoroutine(IFrameActivator(0.2f));
+        /* How to start the Iframes
+        StartCoroutine(Health.IFrameActivator(0.2f));
+        */
         CurrHealth -= damage;
         if (CurrHealth <= 0)
             Die();
@@ -33,5 +34,18 @@ public class Health : MonoBehaviour
             Iframe -= Time.deltaTime;
             yield return null;
         }
+    }
+    public IEnumerator DamageWithInvincible(float Iframes, float damage)
+    {
+        if (Iframe > 0)
+            return;
+        Iframe = Iframes;
+        while (Iframe > 0)
+        {
+            Debug.log("Invincibility Count Down");
+            Iframe -= Time.deltaTime;
+            yield return null;
+        }
+        Damage(damage);
     }
 }
