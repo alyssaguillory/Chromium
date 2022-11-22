@@ -5,6 +5,7 @@ public class ScanbotAI : MonoBehaviour
     public GameObject ProjectilePrefab;
     public Transform LaunchOffset; 
     public HealthController _healthcontroller;
+    public Transform startPos; 
 
     [Header("Attack Parameter")]
     [SerializeField] private float attackCooldown;
@@ -21,6 +22,7 @@ public class ScanbotAI : MonoBehaviour
 
     private EnemyPatrol enemyPatrol;
     public Animator anim;
+    private int hitCount = 0; 
 
 
 
@@ -33,7 +35,7 @@ public class ScanbotAI : MonoBehaviour
     private void Update()
     {
         cooldownTimer += Time.deltaTime;
-
+        transform.position = startPos.position;
         //Attack only when player in sight
         if (PlayerInSight())
         {
@@ -41,6 +43,7 @@ public class ScanbotAI : MonoBehaviour
             {
                 cooldownTimer = 0;
                 anim.SetTrigger("rangedAttack");
+                transform.position = startPos.position; 
                 Debug.Log("player seen"); 
                 
             }
@@ -61,6 +64,10 @@ public class ScanbotAI : MonoBehaviour
 
         if (hit.collider != null)
         {
+            hitCount += 1;
+            if(hitCount > 5){
+                _healthcontroller.playerHealth -= 1;
+            }
             Instantiate(ProjectilePrefab,LaunchOffset.position,transform.rotation); 
             
         }
