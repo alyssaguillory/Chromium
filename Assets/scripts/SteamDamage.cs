@@ -1,17 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SteamDamage : MonoBehaviour
 {
-    public Rigidbody2D rb2D;
-    public Animator animator; 
+    //public _health playerDamage;
+    [SerializeField] private HealthController health;
+    [SerializeField] private int touchDamage;
+    
     void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.tag == "Player"){
-            playerDamage = collision.gameObject.GetComponent(typeof(DamageController)) as DamageController;
+        if (collision.gameObject.tag == "Player"){
+            health = collision.gameObject.GetComponent(typeof(HealthController)) as HealthController;
             Debug.Log("Player detected");
-            playerDamage.Damage();
+            damage(health);
         }
         
     }
+    void damage(HealthController health) {
+    //animator.SetTrigger("isHit");
+    health.playerHealth = health.playerHealth-touchDamage;
+    health.UpdateHealth();
+    if(health.playerHealth == 0){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    //gameObject.SetActive(false);
+   }
 }
