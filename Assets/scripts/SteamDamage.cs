@@ -9,15 +9,15 @@ public class SteamDamage : MonoBehaviour
     [SerializeField] private HealthController health;
     [SerializeField] private int touchDamage;
     
-    void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Player"){
-            health = collision.gameObject.GetComponent(typeof(HealthController)) as HealthController;
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Enemy"){
+            //health = collision.gameObject.GetComponent(typeof(HealthController)) as HealthController;
             Debug.Log("Player detected");
-            damage(health);
+            damage();
         }
         
     }
-    void damage(HealthController health) {
+    void damage() {
     //animator.SetTrigger("isHit");
     health.playerHealth = health.playerHealth-touchDamage;
     health.UpdateHealth();
