@@ -55,13 +55,23 @@ public class PlayerCombat : MonoBehaviour
         {
             if (enemy.GetComponent<Enemy>() != null)
             {
-                Debug.Log("Enemy has been hit!");
+                
                 enemy.GetComponent<Enemy>().TakeDamage(1);
             }
             if(enemy.GetComponent<Health>() != null && enemy.gameObject.tag != "Player")
             {
-                //enemy.GetComponent<Health>().Damage(1);
-                StartCoroutine(enemy.GetComponent<Health>().DamageWithInvincible(0.5f, 1.0f));
+                //Debug.Log("Enemy has been hit!");
+                if (enemy.GetComponent<Health>().GetIframes() <= 0)
+                {
+                    //enemy.GetComponent<Health>().Damage(1);
+                    Debug.Log("Enemy has been hit!");
+                    StartCoroutine(enemy.GetComponent<Health>().DamageWithInvincible(0.5f, 1.0f));
+                    ThrowObject(enemy.gameObject.GetComponent<Rigidbody2D>(), sawBlade, 100f);
+                    //sawBlade.GetChild(1).position = enemy.transform.position;
+                    //sawBlade.GetChild(1).LookAt(sawBlade);
+                    //sawBlade.GetComponentInChildren<ParticleSystem>().Play();
+                    
+                }
             }
         }
     }
@@ -74,6 +84,11 @@ public class PlayerCombat : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Rigidbody2D>() != null)
         {
+            ThrowObject(collision.gameObject.GetComponent<Rigidbody2D>(), sawBlade);
+            //sawBlade.GetChild(1).position = collision.transform.position;
+            //sawBlade.GetChild(1).LookAt(sawBlade);
+            //sawBlade.GetComponentInChildren<ParticleSystem>().Play();
+            /*            
             Vector2 RecoilVector = collision.gameObject.GetComponent<Transform>().position - sawBlade.position;
             RecoilVector = RecoilVector.normalized * 300;
             if(RecoilVector.y < 0)
@@ -86,9 +101,16 @@ public class PlayerCombat : MonoBehaviour
                 Debug.Log("Enemy has been hit!");
                 collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
             }
+            */
         }
     }
-
+    void ThrowObject(Rigidbody2D thrown, Transform thrower, float multiplier = 300f)
+    {
+        Vector2 RecoilVector = thrown.gameObject.GetComponent<Transform>().position - thrower.position;
+        RecoilVector = RecoilVector.normalized * multiplier;
+        if (RecoilVector.y < 0) { RecoilVector = new Vector2(RecoilVector.x, RecoilVector.y * -2); }
+        thrown.AddForce(RecoilVector);
+    }
 }
 /*To find the location that the buzzsaw should go to find the point of the mouse in world cordinates
  * find teh vector to that direction
