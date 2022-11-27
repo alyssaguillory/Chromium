@@ -10,7 +10,7 @@ public class ScanbotAI : MonoBehaviour
     [Header("Attack Parameter")]
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
-    [SerializeField] private int damage;
+    [SerializeField] private float damage;
 
     [Header("Collider Parameters")]
     [SerializeField] private float colliderDistance;
@@ -22,7 +22,8 @@ public class ScanbotAI : MonoBehaviour
 
     private EnemyPatrol enemyPatrol;
     public Animator anim;
-    private int hitCount = 0; 
+    public Health HealthController;
+  
 
 
 
@@ -30,6 +31,7 @@ public class ScanbotAI : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         enemyPatrol = GetComponentInParent<EnemyPatrol>();
+        
     }
 
     private void Update()
@@ -64,11 +66,9 @@ public class ScanbotAI : MonoBehaviour
 
         if (hit.collider != null)
         {
-            hitCount += 1;
-            if(hitCount > 5){
-                _healthcontroller.playerHealth -= 1;
-            }
-            Instantiate(ProjectilePrefab,LaunchOffset.position,transform.rotation); 
+            
+            Instantiate(ProjectilePrefab,LaunchOffset.position,transform.rotation);
+            HealthController.CurrHealth -= damage; 
             
         }
 
