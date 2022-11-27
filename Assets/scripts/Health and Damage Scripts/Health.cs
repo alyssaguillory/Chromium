@@ -6,7 +6,6 @@ public class Health : MonoBehaviour
 {
     public float MaxHealth =  100.0f;
     public float CurrHealth;
-    public int HealthBars = 1;
     private float Iframe = 0.0f;
     public GameObject corpse;
     public SpriteRenderer[] flash;
@@ -26,7 +25,7 @@ public class Health : MonoBehaviour
         if (CurrHealth <= 0)
             Die();
     }
-    public void Die()
+    public virtual void Die()
     {
         Destroy(gameObject);
         Instantiate(corpse, transform.position, Quaternion.identity);
