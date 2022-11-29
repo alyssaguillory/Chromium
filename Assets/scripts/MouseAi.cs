@@ -7,6 +7,7 @@ public class MouseAi : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform target;
+    
 
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
@@ -21,7 +22,7 @@ public class MouseAi : MonoBehaviour
     public SpriteRenderer[] ears;
 
     public bool isStunned = false;
-    bool isElectric = false;
+    public bool isElectric = false;
     bool active = false;
     public float stunDur = 0.0f;
     bool isGrounded = false;
@@ -82,7 +83,7 @@ public class MouseAi : MonoBehaviour
         {
             reachedEndOfPath = false;
         }
-        if (State >= 2)
+        if (State >= 2 && !isStunned)
         {
             targetDistance = (Vector2)target.position - (Vector2)rb.position;
             States();
@@ -154,7 +155,7 @@ public class MouseAi : MonoBehaviour
                 a.enabled = true;
             }
             State = 2;
-            isElectric = true;
+            electrify();
             //Do particle effects
         }
     }
@@ -189,13 +190,14 @@ public class MouseAi : MonoBehaviour
     {
         if (isGrounded && padTime<0.5)
         {
-            State = 5;
+            dissapate();
             Recharge = 2.5f;
             return;
         }
         if (rb.gameObject.GetComponent<Collider2D>().bounds.Intersects(target.gameObject.GetComponent<Collider2D>().bounds) && !dealtDamage)
         {
             Debug.Log("Bounds intersecting");
+            StartCoroutine(target.gameObject.GetComponent<Health>().DamageWithInvincible(0.6f, 50.0f));
             dealtDamage = true;
         }
         padTime -= Time.deltaTime;
@@ -225,7 +227,7 @@ public class MouseAi : MonoBehaviour
                     rb.AddForce(Vector2.left * speed * 0.75f * Time.deltaTime);
                 }
             } 
-        } else { State = 2; dealtDamage = false; }
+        } else { State = 2; dealtDamage = false; electrify(); }
     }
 
     void OnPathComplete(Path p)
@@ -251,6 +253,38 @@ public class MouseAi : MonoBehaviour
     public void Die()
     {
         Dead = true;
+        
+    }
+    public IEnumerator Stun(float stunLength)
+    {
+        Debug.Log("We working?");
+        isStunned = true;
+        
+        while (stunLength > 0)
+        {
+            stunLength -= Time.deltaTime;
+            if (isGrounded)
+            {
+                State = 5;
+                dissapate();
+                Recharge = 2.5f;
+            }
+            Debug.Log("We stunned?");
+            yield return null;
+        }
+        isStunned = false;
+    }
+
+    public void electrify()
+    {
+        isElectric = true;
+        ears[7].enabled = true;
+    }
+    public void dissapate()
+    {
+        State = 5;
+        isElectric = false;
+        ears[7].enabled = false;
     }
 }
 /*[x]The mouse will be inactive until the player gets close.
