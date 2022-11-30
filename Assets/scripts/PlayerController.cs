@@ -144,6 +144,8 @@ public class PlayerController : MonoBehaviour
             
         } else if (collision.tag == "Checkpoint"){
             respawnPoint = transform.position;
+        } else if (collision.tag == "projectile"){
+            Debug.Log("Player Hit!");
         }
     }
 
