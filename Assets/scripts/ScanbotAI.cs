@@ -1,15 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
+
 
 public class ScanbotAI : MonoBehaviour
 {
     public GameObject ProjectilePrefab;
     public Transform LaunchOffset; 
-    public HealthController _healthcontroller;
+    
+    public Transform startPos; 
+    Rigidbody2D rb;
+    private Vector2 targetDistance; 
 
     [Header("Attack Parameter")]
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
-    [SerializeField] private int damage;
+    [SerializeField] private float damage;
 
     [Header("Collider Parameters")]
     [SerializeField] private float colliderDistance;
@@ -21,26 +28,35 @@ public class ScanbotAI : MonoBehaviour
 
     private EnemyPatrol enemyPatrol;
     public Animator anim;
+    public Health HealthController;
+    public Transform target; 
+    
+  
 
 
 
-    private void Awake()
+    private void Start()
     {
         anim = GetComponent<Animator>();
         enemyPatrol = GetComponentInParent<EnemyPatrol>();
+        target = GetComponent<Transform>(); 
+        rb = GetComponent<Rigidbody2D>(); 
+
+        
     }
 
     private void Update()
     {
         cooldownTimer += Time.deltaTime;
-
+        transform.position = startPos.position;
         //Attack only when player in sight
         if (PlayerInSight())
         {
             if (cooldownTimer > attackCooldown)
             {
                 cooldownTimer = 0;
-                anim.SetTrigger("rangedAttack");
+                //anim.SetTrigger("rangedAttack");
+                transform.position = startPos.position; 
                 Debug.Log("player seen"); 
                 
             }
@@ -50,6 +66,9 @@ public class ScanbotAI : MonoBehaviour
         {
             enemyPatrol.enabled = !PlayerInSight();
         }
+        targetDistance = (Vector2)target.position - (Vector2)rb.position;
+        if(targetDistance.x > 0) { transform.eulerAngles = new Vector2(0, 180); } else if (targetDistance.x < 0) { transform.eulerAngles = new Vector2(0, 0); }
+            
     }
 
     private bool PlayerInSight()
@@ -61,7 +80,12 @@ public class ScanbotAI : MonoBehaviour
 
         if (hit.collider != null)
         {
-            Instantiate(ProjectilePrefab,LaunchOffset.position,transform.rotation); 
+            
+            Instantiate(ProjectilePrefab,LaunchOffset.position,target.rotation);
+            //Instantiate(ProjectilePrefab,target.position,target.rotation);
+           //Instantiate(ProjectilePrefab,target.position,transform.rotation);
+            HealthController.CurrHealth -= damage; 
+            
             
         }
 
