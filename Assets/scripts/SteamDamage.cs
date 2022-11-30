@@ -10,7 +10,7 @@ public class SteamDamage : MonoBehaviour
     [SerializeField] private float touchDamage;
     
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Enemy"){
+        if (collision.gameObject.tag == "Steam"){
             //health = collision.gameObject.GetComponent(typeof(PlayerHealth)) as PlayerHealth;
             Debug.Log("Player detected");
             damage();
@@ -18,7 +18,6 @@ public class SteamDamage : MonoBehaviour
         
     }
     void damage() {
-    //animator.SetTrigger("isHit");
     //health.playerHealth = health.playerHealth-touchDamage;
     health.Damage(touchDamage);
     //if(health.playerHealth == 0){
