@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 121379317}
   m_Layer: 6
   m_Name: steam (1)
-  m_TagString: Enemy
+  m_TagString: Steam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 317855705}
   m_Layer: 6
   m_Name: steam (2)
-  m_TagString: Enemy
+  m_TagString: Steam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3223,7 +3223,7 @@ GameObject:
   - component: {fileID: 1246947777}
   m_Layer: 6
   m_Name: steam (3)
-  m_TagString: Enemy
+  m_TagString: Steam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4921,7 +4921,7 @@ GameObject:
   - component: {fileID: 1883813213}
   m_Layer: 6
   m_Name: steam
-  m_TagString: Enemy
+  m_TagString: Steam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
