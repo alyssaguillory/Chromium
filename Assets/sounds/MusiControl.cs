@@ -6,6 +6,11 @@ public class MusiControl : MonoBehaviour
 {
     public AudioSource movement, attack, grapple;
 
+    void Start()
+    {
+        //DontDestroyOnLoad(gameObject);
+    }
+
     // Update is called once per frame
     void Update()
     {

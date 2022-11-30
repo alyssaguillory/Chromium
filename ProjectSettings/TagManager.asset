@@ -7,6 +7,10 @@ TagManager:
   - Platform
   - Ground
   - Rope
+  - fallCollider
+  - Checkpoint
+  - GM
+  - Steam
   layers:
   - Default
   - TransparentFX
