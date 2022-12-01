@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3031184480115804914}
   - component: {fileID: 3031184480115804913}
   - component: {fileID: 8473365695127886969}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Scan_bot_projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3031184480160645134}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
