@@ -180,7 +180,7 @@ Transform:
   - {fileID: 4927154155575200772}
   - {fileID: 2660793357662728037}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2660793358232325975
 GameObject:
@@ -597,8 +597,7 @@ MonoBehaviour:
   m_text: "Producer                         Engineers\n    Kamden Burke              
     Antonio Urias-Cordero\n                                             Zachary Hoover\n                                            
     Travis Cook\n\n Artists                             Designers\n    Kyara Zacarias              
-    Alec Minney\n    Alyssa Guillory               Jena Myers \n    Delila Nguyen                            
-    \n"
+    Alec Minney\n    Alyssa Guillory               Jena Myers \n    Dalila Nguyen"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 151917f3807d95546ba9de919c668b72, type: 2}
   m_sharedMaterial: {fileID: 3733353497345562817, guid: 151917f3807d95546ba9de919c668b72, type: 2}
