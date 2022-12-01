@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MusiControl : MonoBehaviour
 {
-    public AudioSource movement, attack, grapple;
+    public AudioSource movement, attack, grapple, jump;
 
     void Start()
     {
@@ -36,5 +36,9 @@ public class MusiControl : MonoBehaviour
         {
             grapple.Play();
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            jump.Play();
+        }    
     }
 }
