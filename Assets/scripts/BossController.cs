@@ -162,15 +162,15 @@ public class BossController : MonoBehaviour
     {
         int x = Random.Range(0,8);
         int y = x;
-        int z = x;
+        //int z = x;
         while(x == y) { y = Random.Range(0, 8); }
-        while (z == y || z == x) { z = Random.Range(0, 8); }
+        //while (z == y || z == x) { z = Random.Range(0, 8); }
         blasts[x] = FirePlatform(x, FireInterval * gameMultiplier);
         blasts[y] = FirePlatform(y, FireInterval * gameMultiplier);
-        blasts[z] = FirePlatform(z, FireInterval * gameMultiplier);
+        //blasts[z] = FirePlatform(z, FireInterval * gameMultiplier);
         StartCoroutine(blasts[x]);
         StartCoroutine(blasts[y]);
-        StartCoroutine(blasts[z]);
+        //StartCoroutine(blasts[z]);
     }
     IEnumerator FirePlatform(int Column, float time)
     {
