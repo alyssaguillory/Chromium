@@ -28,7 +28,7 @@ public class LevelControl : MonoBehaviour
         {
             //SceneManager.LoadScene(1);
             SceneManager.LoadScene(levelName);
-            gm.lastCheckPointPos = new Vector2(-113, -4);
+            gm.lastCheckPointPos = new Vector2(-113.0f, -4.0f);
         }
         /*if(other.CompareTag("Player") && been_there_flag == true)
         {
