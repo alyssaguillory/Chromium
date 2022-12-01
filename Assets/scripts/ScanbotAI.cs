@@ -78,16 +78,6 @@ public class ScanbotAI : MonoBehaviour
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y * range, boxCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
 
-        if (hit.collider != null)
-        {
-            
-            
-            //Instantiate(ProjectilePrefab,target.position,target.rotation);
-           //Instantiate(ProjectilePrefab,target.position,transform.rotation);
-            HealthController.CurrHealth -= damage; 
-            
-            
-        }
 
         return hit.collider != null;
     }

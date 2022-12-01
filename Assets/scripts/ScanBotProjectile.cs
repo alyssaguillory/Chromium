@@ -39,7 +39,7 @@ public class ScanBotProjectile : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.GetComponent<Health>() != null)
-            StartCoroutine(collision.gameObject.GetComponent<Health>().DamageWithInvincible(0.2f, 20.0f));
+            collision.gameObject.GetComponent<Health>().Damage(20.0f);
         Destroy(transform.parent.gameObject);
     }
 }
