@@ -17,7 +17,7 @@ public class PlayerHealth : Health
     }
     public override void Die()
     {
-        if (CurrBars > 1)
+        if (CurrBars => 1)
         {
             CurrBars--;
             CurrHealth = MaxHealth;
