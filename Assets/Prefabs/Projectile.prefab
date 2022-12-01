@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3031184480115804912}
   - component: {fileID: 3031184480115804915}
   - component: {fileID: 3031184480115804914}
-  - component: {fileID: 3031184480115804913}
   - component: {fileID: 8473365695127886969}
-  m_Layer: 7
+  - component: {fileID: 6541955935156890388}
+  m_Layer: 13
   m_Name: Scan_bot_projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,27 +113,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.02, y: 3.7}
   m_EdgeRadius: 0
---- !u!50 &3031184480115804913
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3031184480115804919}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &8473365695127886969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +126,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 50
+  player: {fileID: 0}
+--- !u!251 &6541955935156890388
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3031184480115804919}
+  m_Enabled: 0
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 0
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &3031184480160645133
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3031184480160645134}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
