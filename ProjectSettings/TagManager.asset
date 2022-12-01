@@ -11,6 +11,7 @@ TagManager:
   - Checkpoint
   - GM
   - Steam
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Weapon
   - HazardClip
   - HazardNoClip
-  - 
+  - EnemyWeapon
   - 
   - 
   - 
