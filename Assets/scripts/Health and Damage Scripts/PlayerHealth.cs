@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : Health
 {
@@ -21,6 +22,9 @@ public class PlayerHealth : Health
             CurrBars--;
             CurrHealth = MaxHealth;
             healthSpawner.redoHealth();
+        }
+        else {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         Debug.Log("You Died");
     }
