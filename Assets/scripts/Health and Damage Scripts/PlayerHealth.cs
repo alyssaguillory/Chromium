@@ -48,7 +48,7 @@ public class PlayerHealth : Health
     void OnParticleCollision(GameObject other)
     {
         //Debug.Log("Hit");
-        StartCoroutine(DamageWithInvincible(0.1f, 2.0f));
+        StartCoroutine(DamageWithInvincible(0.1f, 4.0f));
     }
 }
 

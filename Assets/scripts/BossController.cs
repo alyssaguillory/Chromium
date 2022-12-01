@@ -196,7 +196,9 @@ public class BossController : MonoBehaviour
             if(counter == 3)
             {
                 if (laserer != null) { StopCoroutine(laserer); }
+                laserer = laserFiring(2.0f);
                 StartCoroutine(laserer);
+                counter = 0;
             }
             yield return new WaitForSeconds(time + Random.Range(0.0f,1.0f));
         }
@@ -213,7 +215,7 @@ public class BossController : MonoBehaviour
     }
     IEnumerator laserFiring(float time)
     {
-        float rotspeed = 60.0f;
+        float rotspeed = 40.0f;
         
         int dice;
         times = 0;

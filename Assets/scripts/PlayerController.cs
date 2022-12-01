@@ -146,6 +146,13 @@ public class PlayerController : MonoBehaviour
             respawnPoint = transform.position;
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.tag == "Steam")
+        {
+            StartCoroutine(gameObject.GetComponent<Health>().DamageWithInvincible(0.5f, 20.0f));
+        }
+    }
 
 
 }
