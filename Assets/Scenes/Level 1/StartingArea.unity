@@ -7669,20 +7669,6 @@ MonoBehaviour:
   HealthBars: 3
   CurrBars: 0
   regenWait: 2
---- !u!114 &666341374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666341342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58eeba2dbdedb5f4090ef4651c566ff8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 666341366}
-  touchDamage: 20
 --- !u!212 &674014283 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 8696113135583641197, guid: 68b67425b4237044ab80e2fe9b8bceba, type: 3}
@@ -15211,7 +15197,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -1.45}
@@ -19175,7 +19161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8700612455028553205, guid: fd084c425cb3cf742b4a7276a347fed0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4.7852936
+      value: 4.7852783
       objectReference: {fileID: 0}
     - target: {fileID: 8700612455028553210, guid: fd084c425cb3cf742b4a7276a347fed0, type: 3}
       propertyPath: m_Color.a
@@ -19251,7 +19237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9168434056711972200, guid: fd084c425cb3cf742b4a7276a347fed0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -6.9620667
+      value: -6.962036
       objectReference: {fileID: 0}
     - target: {fileID: 9168434056711972200, guid: fd084c425cb3cf742b4a7276a347fed0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
