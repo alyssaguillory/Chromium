@@ -286,6 +286,13 @@ public class MouseAi : MonoBehaviour
         isElectric = false;
         ears[7].enabled = false;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "fallCollider")
+        {
+            gameObject.GetComponent<Health>().Die();
+        }
+    }
 }
 /*[x]The mouse will be inactive until the player gets close.
  *[x]While hidden, it is invisible except the tail.

@@ -45,5 +45,10 @@ public class PlayerHealth : Health
             yield return null;
         }
     }
+    void OnParticleCollision(GameObject other)
+    {
+        //Debug.Log("Hit");
+        StartCoroutine(DamageWithInvincible(0.1f, 2.0f));
+    }
 }
 
