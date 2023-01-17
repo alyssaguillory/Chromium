@@ -9,10 +9,16 @@ public class MainMenu : MonoBehaviour
     public GameObject mainMenuUI;
     public GameObject controlsUI;
     public GameObject creditsUI;
+    public GameMaster gm;
 
     public void PlayGame()
     {
         Debug.Log("StartMenu -> Button Clicked -> Play");
+        
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+        if(gm != null)
+            gm.lastCheckPointPos = new Vector2(55.5f, 14.4f);
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     

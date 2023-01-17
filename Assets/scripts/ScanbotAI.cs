@@ -39,7 +39,7 @@ public class ScanbotAI : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         enemyPatrol = GetComponentInParent<EnemyPatrol>();
-        target = GetComponent<Transform>(); 
+         
         rb = GetComponent<Rigidbody2D>(); 
 
         
@@ -57,10 +57,10 @@ public class ScanbotAI : MonoBehaviour
                 cooldownTimer = 0;
                 //anim.SetTrigger("rangedAttack");
                 transform.position = startPos.position; 
-                Debug.Log("player seen"); 
-                
+                Debug.Log("player seen");
+                Instantiate(ProjectilePrefab, LaunchOffset.position, Quaternion.identity);
             }
-
+            cooldownTimer += Time.deltaTime;
         }
         if (enemyPatrol != null)
         {
@@ -78,16 +78,6 @@ public class ScanbotAI : MonoBehaviour
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y * range, boxCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
 
-        if (hit.collider != null)
-        {
-            
-            Instantiate(ProjectilePrefab,LaunchOffset.position,target.rotation);
-            //Instantiate(ProjectilePrefab,target.position,target.rotation);
-           //Instantiate(ProjectilePrefab,target.position,transform.rotation);
-            HealthController.CurrHealth -= damage; 
-            
-            
-        }
 
         return hit.collider != null;
     }

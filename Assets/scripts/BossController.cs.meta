@@ -3,7 +3,11 @@ guid: 1668a8426f3999845be23987fb911137
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - BrokenPanel: {fileID: 8795026080117098585, guid: 785bf76a410079e4b8ea92a8af20b9ac, type: 3}
+  - Laser: {instanceID: 0}
+  - LaserPrefab: {fileID: 7352660186042255518, guid: 6fa6273907e46c240bcd6c40b21f46dc, type: 3}
+  - Conveyor: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

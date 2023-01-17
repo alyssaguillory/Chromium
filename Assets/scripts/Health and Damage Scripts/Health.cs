@@ -17,7 +17,6 @@ public class Health : MonoBehaviour
     }
     public virtual void Damage(float damage)
     {
-        Debug.Log("MainDamage");
         /* How to start the Iframes
         StartCoroutine(Health.IFrameActivator(0.2f));
         */
@@ -27,7 +26,7 @@ public class Health : MonoBehaviour
     }
     public virtual void Die()
     {
-        Destroy(gameObject);
+        Debug.Log("Die");
         Instantiate(corpse, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
@@ -42,8 +41,9 @@ public class Health : MonoBehaviour
             yield return null;
         }
     }
-    public IEnumerator DamageWithInvincible(float Iframes, float damage)
+    public virtual IEnumerator DamageWithInvincible(float Iframes, float damage)
     {
+        if (Iframe > 0) { yield break; }
         Damage(damage);
         Iframe = Iframes;
         StartCoroutine(DamageFlash(Iframes));
@@ -56,7 +56,7 @@ public class Health : MonoBehaviour
         }
         
     }
-    IEnumerator DamageFlash(float flashtime)
+    public IEnumerator DamageFlash(float flashtime)
     {
         Color flashHalfColor = new Color(1.0f, 1.0f, 1.0f, 0.25f);
         for (int i = 0; i < 4; i++)

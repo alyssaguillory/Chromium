@@ -64,9 +64,11 @@ public class PlayerCombat : MonoBehaviour
                 if (enemy.GetComponent<Health>().GetIframes() <= 0)
                 {
                     //enemy.GetComponent<Health>().Damage(1);
-                    Debug.Log("Enemy has been hit!");
                     StartCoroutine(enemy.GetComponent<Health>().DamageWithInvincible(0.5f, 1.0f));
-                    ThrowObject(enemy.gameObject.GetComponent<Rigidbody2D>(), sawBlade, 100f);
+                    if (enemy.gameObject.GetComponent<Rigidbody2D>() != null)
+                    {
+                        ThrowObject(enemy.gameObject.GetComponent<Rigidbody2D>(), sawBlade, 100f);
+                    }
                     //sawBlade.GetChild(1).position = enemy.transform.position;
                     //sawBlade.GetChild(1).LookAt(sawBlade);
                     //sawBlade.GetComponentInChildren<ParticleSystem>().Play();
