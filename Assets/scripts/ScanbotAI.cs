@@ -29,26 +29,32 @@ public class ScanbotAI : MonoBehaviour
     private EnemyPatrol enemyPatrol;
     public Animator anim;
     public Health HealthController;
-    public Transform target; 
-    
-  
+    public Transform target;
 
+    // array of waypoints to patrol
+    public Transform[] waypoints;
+    [SerializeField] private float speed;
+    private int waypointIndex;
+    private float dist;
 
+    public float startWaitTime; //amount of time to pause at each waypoint
+    private float waitTime; 
 
     private void Start()
     {
         anim = GetComponent<Animator>();
-        enemyPatrol = GetComponentInParent<EnemyPatrol>();
-         
-        rb = GetComponent<Rigidbody2D>(); 
+        //enemyPatrol = GetComponentInParent<EnemyPatrol>();
 
-        
+        rb = GetComponent<Rigidbody2D>();
+        waypointIndex = 0;
+        waitTime = startWaitTime;
+
     }
 
     private void Update()
     {
         cooldownTimer += Time.deltaTime;
-        transform.position = startPos.position;
+        //transform.position = startPos.position;
         //Attack only when player in sight
         if (PlayerInSight())
         {
@@ -56,19 +62,35 @@ public class ScanbotAI : MonoBehaviour
             {
                 cooldownTimer = 0;
                 //anim.SetTrigger("rangedAttack");
-                transform.position = startPos.position; 
+                //transform.position = startPos.position; 
                 Debug.Log("player seen");
                 Instantiate(ProjectilePrefab, LaunchOffset.position, Quaternion.identity);
             }
             cooldownTimer += Time.deltaTime;
         }
-        if (enemyPatrol != null)
+        else
         {
-            enemyPatrol.enabled = !PlayerInSight();
+            if(waypoints.Length > 0)
+            {
+                // get distance between waypoint and scanbot
+                dist = Vector2.Distance(transform.position, waypoints[waypointIndex].position);
+
+                //if scanbot is within certain range, increase index to next waypoint
+                if (dist < 2f)
+                {
+                    if (waitTime <= 0)
+                    {
+                        IncreaseIndex();
+                        waitTime = startWaitTime;
+                    }
+                    else
+                    {
+                        waitTime -= Time.deltaTime;
+                    }
+                }
+                Patrol();
+            }  
         }
-        targetDistance = (Vector2)target.position - (Vector2)rb.position;
-        if(targetDistance.x > 0) { transform.eulerAngles = new Vector2(0, 180); } else if (targetDistance.x < 0) { transform.eulerAngles = new Vector2(0, 0); }
-            
     }
 
     private bool PlayerInSight()
@@ -87,5 +109,19 @@ public class ScanbotAI : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y * range, boxCollider.bounds.size.z));
+    }
+
+    private void Patrol()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, waypoints[waypointIndex].position, speed * Time.deltaTime);
+    }
+
+    void IncreaseIndex()
+    {
+        waypointIndex++;
+        if(waypointIndex >= waypoints.Length)
+        {
+            waypointIndex = 0;
+        }
     }
 }
