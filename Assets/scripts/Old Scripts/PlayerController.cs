@@ -42,15 +42,15 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         /*
-        moveInput = Input.GetAxisRaw("Horizontal");
+        horizontalForce = Input.GetAxisRaw("Horizontal");
         isJumping = Input.GetButtonDown("Jump");
         isFighting = Input.GetKey(KeyCode.Mouse0);
         */
         //Make player move slower when not grounded
 
         //Mirros the positions of the robot
-        //if (moveInput > 0) {transform.eulerAngles = new Vector3(0, 0, 0);}
-        //else if (moveInput < 0) {transform.eulerAngles = new Vector3(0, 180, 0); buzzSaw.transform.eulerAngles = new Vector3(0, 180, 0); }
+        //if (horizontalForce > 0) {transform.eulerAngles = new Vector3(0, 0, 0);}
+        //else if (horizontalForce < 0) {transform.eulerAngles = new Vector3(0, 180, 0); buzzSaw.transform.eulerAngles = new Vector3(0, 180, 0); }
         //Adds to the velocity of the robot
         Vector2 force = new Vector2(moveInput * speed, 0);
         if (!isGrounded) { force = force * 0.5f; }
