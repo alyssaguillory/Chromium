@@ -8661,6 +8661,13 @@ MonoBehaviour:
   target: {fileID: 666341351}
   waypoints: []
   speed: 0
+  startWaitTime: 0
+  myCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!95 &733174485
 Animator:
   serializedVersion: 4
@@ -14435,7 +14442,50 @@ MonoBehaviour:
   - {fileID: 1324941230}
   - {fileID: 1843158232}
   - {fileID: 1258721621}
-  speed: 0.5
+  speed: 5
+  startWaitTime: 1.25
+  myCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 7.70271
+      value: 11.692081
+      inSlope: -4.7346888
+      outSlope: -4.7346888
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.9284691
+      outWeight: 0.089652464
+    - serializedVersion: 3
+      time: 12.038195
+      value: 7.0813704
+      inSlope: -1.1899041
+      outSlope: -1.1899041
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 16.0042
+      value: -0.13953596
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 0
+    m_RotationOrder: 4
 --- !u!114 &1168783973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14464,7 +14514,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 67bfd9e6763d61244af45f09a786a807, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -14738,7 +14788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258721620}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 326.29, y: 7.61, z: -10.411509}
+  m_LocalPosition: {x: 344.6, y: 15.2, z: -10.411509}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15922,6 +15972,13 @@ MonoBehaviour:
   target: {fileID: 666341351}
   waypoints: []
   speed: 0
+  startWaitTime: 0
+  myCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1324639579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16018,7 +16075,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324941229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 318.35, y: 26.94, z: -0.41151}
+  m_LocalPosition: {x: 308.7, y: 19.6, z: -0.41151}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18467,6 +18524,13 @@ MonoBehaviour:
   target: {fileID: 666341351}
   waypoints: []
   speed: 1
+  startWaitTime: 0
+  myCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1432318885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22616,7 +22680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843158231}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 338.03, y: 28.44, z: -10.411509}
+  m_LocalPosition: {x: 327.6, y: 17.9, z: -10.411509}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

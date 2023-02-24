@@ -30,6 +30,7 @@ public class ScanbotAI : MonoBehaviour
     public Animator anim;
     public Health HealthController;
     public Transform target;
+    private GameObject player;
 
     // array of waypoints to patrol
     public Transform[] waypoints;
@@ -38,7 +39,11 @@ public class ScanbotAI : MonoBehaviour
     private float dist;
 
     public float startWaitTime; //amount of time to pause at each waypoint
-    private float waitTime; 
+    private float waitTime;
+
+    public AnimationCurve myCurve;
+    private int randomDirection;
+    private Vector2 targetPos;
 
     private void Start()
     {
@@ -62,10 +67,48 @@ public class ScanbotAI : MonoBehaviour
             {
                 cooldownTimer = 0;
                 //anim.SetTrigger("rangedAttack");
-                //transform.position = startPos.position; 
                 Debug.Log("player seen");
                 Instantiate(ProjectilePrefab, LaunchOffset.position, Quaternion.identity);
             }
+            randomDirection = Random.Range(0, 3);
+            targetPos = new Vector2(transform.position.x + 5, transform.position.y);
+            dist = Vector2.Distance(transform.position, targetPos);
+            Debug.Log(dist);
+            switch (randomDirection)
+            {
+                case 0:
+                    if(dist < 2f)
+                    {
+                        targetPos = new Vector2(transform.position.x + 5, transform.position.y);
+                        dist = Vector2.Distance(transform.position, targetPos);
+                    }
+                    break;
+                case 1:
+                    if (dist < 2f)
+                    {
+                        targetPos = new Vector2(transform.position.x, transform.position.y + 5);
+                        dist = Vector2.Distance(transform.position, targetPos);
+                    }
+                    break;
+                case 2:
+                    if (dist < 2f)
+                    {
+                        targetPos = new Vector2(transform.position.x - 5, transform.position.y);
+                        dist = Vector2.Distance(transform.position, targetPos);
+                    }
+                    break;
+                case 3:
+                    if (dist < 2f)
+                    {
+                        targetPos = new Vector2(transform.position.x, transform.position.y - 5);
+                        dist = Vector2.Distance(transform.position, targetPos);
+                    }
+                    break;
+                default:
+                    break;
+            }
+            transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+
             cooldownTimer += Time.deltaTime;
         }
         else
