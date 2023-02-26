@@ -5,7 +5,7 @@ using UnityEngine;
 public class weaponPrimarySaw : WeaponBase
 {
     private bool isActive = false;
-    //public Animator animator;
+    public Animator animator;
     public Transform sawBlade;
     public Transform buzzSaw;
     public LayerMask enemyLayers;
@@ -28,14 +28,14 @@ public class weaponPrimarySaw : WeaponBase
 
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                //animator.SetTrigger("Attack");
+                animator.SetTrigger("Attack");
                 Attack();
             }
             if (Input.GetKey(KeyCode.Mouse0))
             {
                 sawBlade.localPosition = sawBlade.localPosition + ((Vector3)toHitSpot + (Vector3)start - sawBlade.localPosition) * Time.deltaTime * 8;
                 buzzSaw.Rotate(0.0f, 0.0f, 5.0f);
-                //animator.SetBool("isFighting", true);
+                animator.SetBool("isFighting", true);
                 sawBlade.gameObject.GetComponent<CircleCollider2D>().enabled = true;
                 Attack();
             }
