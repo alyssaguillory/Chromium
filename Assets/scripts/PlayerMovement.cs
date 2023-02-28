@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.Space)){
             if (Input.GetKeyDown(KeyCode.Space) && !isGrounded) { vertTime = 1; }
             if (isGrounded) { vertTime = 0; isGrounded = false; }
-            vertTime = vertTime + Time.deltaTime;
+            vertTime = vertTime + Time.deltaTime*2;
             if(vertTime > 0.5f) { isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround); }
             Debug.Log(vertTime);
             //Debug.Log(jumpForce.Evaluate(vertTime));
