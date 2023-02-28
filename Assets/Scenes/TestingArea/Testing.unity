@@ -836,7 +836,7 @@ MonoBehaviour:
   secondaryWeapons: []
   wheelBase: {fileID: 2095132791}
   selector: {fileID: 1371797034}
-  angleOffset: 21
+  angleOffset: -67.5
 --- !u!95 &1073880704
 Animator:
   serializedVersion: 4
@@ -1126,13 +1126,14 @@ GameObject:
   - component: {fileID: 1371797035}
   - component: {fileID: 1371797037}
   - component: {fileID: 1371797036}
+  - component: {fileID: 1371797038}
   m_Layer: 5
   m_Name: WheelSelector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1371797035
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1180,7 +1181,7 @@ MonoBehaviour:
   m_FillMethod: 4
   m_FillAmount: 0.117
   m_FillClockwise: 1
-  m_FillOrigin: 1
+  m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1371797037
@@ -1191,6 +1192,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371797034}
   m_CullTransparentMesh: 1
+--- !u!95 &1371797038
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371797034}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 91c1216cc950eff448e4922a55587362, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1414553556
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,7 +2743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 0}
+  m_Color: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
