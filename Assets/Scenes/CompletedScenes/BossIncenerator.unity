@@ -5415,12 +5415,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3180f49c6fd8cf4dabcab55f9ded4f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  MaxHealth: 150
   CurrHealth: 0
   corpse: {fileID: 8795026080117098585, guid: 785bf76a410079e4b8ea92a8af20b9ac, type: 3}
   flash:
   - {fileID: 123982998}
   boss: {fileID: 705996455}
+  timeToDeactivate: 5
+  shouldChangeColor: 0
+  vulnerableTime: 2
+  invulnerableTime: 3
 --- !u!212 &138427438 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 5963546189771910292, guid: 65207b9be9e08a5469193fcd426dc33c, type: 3}
@@ -30754,7 +30758,7 @@ SpriteRenderer:
   m_Size: {x: 40, y: 40}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
 --- !u!4 &474153533
@@ -60893,12 +60897,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3180f49c6fd8cf4dabcab55f9ded4f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  MaxHealth: 150
   CurrHealth: 0
   corpse: {fileID: 8795026080117098585, guid: 785bf76a410079e4b8ea92a8af20b9ac, type: 3}
   flash:
   - {fileID: 849081524}
   boss: {fileID: 705996455}
+  timeToDeactivate: 5
+  shouldChangeColor: 0
+  vulnerableTime: 2
+  invulnerableTime: 3
 --- !u!1 &861703783
 GameObject:
   m_ObjectHideFlags: 0
@@ -97096,12 +97104,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3180f49c6fd8cf4dabcab55f9ded4f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  MaxHealth: 150
   CurrHealth: 0
   corpse: {fileID: 8795026080117098585, guid: 785bf76a410079e4b8ea92a8af20b9ac, type: 3}
   flash:
   - {fileID: 1275727487}
   boss: {fileID: 705996455}
+  timeToDeactivate: 5
+  shouldChangeColor: 0
+  vulnerableTime: 2
+  invulnerableTime: 3
 --- !u!1 &1288748363
 GameObject:
   m_ObjectHideFlags: 0
@@ -102310,12 +102322,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3180f49c6fd8cf4dabcab55f9ded4f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  MaxHealth: 150
   CurrHealth: 0
   corpse: {fileID: 8795026080117098585, guid: 785bf76a410079e4b8ea92a8af20b9ac, type: 3}
   flash:
   - {fileID: 1379987583}
   boss: {fileID: 705996455}
+  timeToDeactivate: 5
+  shouldChangeColor: 0
+  vulnerableTime: 2
+  invulnerableTime: 3
 --- !u!1001 &1386514192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -163343,7 +163359,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a15f5827cc41afe4d8554d2426baa110, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce4adc37b663c864aadf237fc7e072f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

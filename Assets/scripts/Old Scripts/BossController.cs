@@ -244,6 +244,7 @@ public class BossController : MonoBehaviour
                 {
                     a.Stop();
                 }
+                //choosePlatforms();
             }
             //Debug.Log(rotspeed);
             while (warned == false)

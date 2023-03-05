@@ -90,6 +90,7 @@ public class weaponPrimarySaw : WeaponBase
         Gizmos.color = new Color(1, 1, 0, 0.75F);
         Gizmos.DrawSphere(sawBlade.position, attackRange);
     }
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<Rigidbody2D>() != null)
@@ -98,7 +99,7 @@ public class weaponPrimarySaw : WeaponBase
             //sawBlade.GetChild(1).position = collision.transform.position;
             //sawBlade.GetChild(1).LookAt(sawBlade);
             //sawBlade.GetComponentInChildren<ParticleSystem>().Play();
-            /*            
+                        
             Vector2 RecoilVector = collision.gameObject.GetComponent<Transform>().position - sawBlade.position;
             RecoilVector = RecoilVector.normalized * 300;
             if(RecoilVector.y < 0)
@@ -111,9 +112,10 @@ public class weaponPrimarySaw : WeaponBase
                 Debug.Log("Enemy has been hit!");
                 collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
             }
-            */
+            
         }
     }
+    */
     void ThrowObject(Rigidbody2D thrown, Transform thrower, float multiplier = 300f)
     {
         Vector2 RecoilVector = thrown.gameObject.GetComponent<Transform>().position - thrower.position;

@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: df9f9320f3d3d3e49b9ce41dde97f949, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 49fdb55a730687d4eb5d29371467c31e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   climbDistance: 0.4
   climbSpeed: 0.8
   distance: 1
-  nodePrefab: {fileID: 4780868417568961996, guid: 97bd839fe4950114a924064af05ba719, type: 3}
+  nodePrefab: {fileID: 4780868417568961996, guid: 8b433c4144197034794755c20d731e78, type: 3}
   player: {fileID: 0}
   lastNode: {fileID: 0}
   lr: {fileID: 0}
