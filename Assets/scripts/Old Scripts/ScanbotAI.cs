@@ -29,26 +29,34 @@ public class ScanbotAI : MonoBehaviour
     private EnemyPatrol enemyPatrol;
     public Animator anim;
     public Health HealthController;
-    public Transform target; 
-    
-  
+    public Transform target;
+    public GameObject player;
 
-
+    [Header("Movement")]
+    public Transform[] waypoints; //patrol points
+    [SerializeField] private float speed;
+    private int waypointIndex; //current selected waypoint
+    public float startWaitTime; //amount of time to pause at each waypoint
+    private float waitTime;
+    private Vector2 targetPos; //target position when moving away from player
+    private float dist; //distance between player and scanbot
+    public int direction; //set direction to move away from player
 
     private void Start()
     {
         anim = GetComponent<Animator>();
-        enemyPatrol = GetComponentInParent<EnemyPatrol>();
-         
-        rb = GetComponent<Rigidbody2D>(); 
+        //enemyPatrol = GetComponentInParent<EnemyPatrol>();
 
-        
+        rb = GetComponent<Rigidbody2D>();
+        waypointIndex = 0;
+        waitTime = startWaitTime;
+
     }
 
     private void Update()
     {
         cooldownTimer += Time.deltaTime;
-        transform.position = startPos.position;
+        //transform.position = startPos.position;
         //Attack only when player in sight
         if (PlayerInSight())
         {
@@ -56,19 +64,59 @@ public class ScanbotAI : MonoBehaviour
             {
                 cooldownTimer = 0;
                 //anim.SetTrigger("rangedAttack");
-                transform.position = startPos.position; 
                 Debug.Log("player seen");
                 Instantiate(ProjectilePrefab, LaunchOffset.position, Quaternion.identity);
             }
+
+            switch (direction)
+            {
+                case 1: //right
+                    targetPos = new Vector2(transform.position.x + 5, transform.position.y);
+                    break;
+                case 2: //left
+                    targetPos = new Vector2(transform.position.x - 5, transform.position.y);
+                    break;
+                case 3: //up
+                    targetPos = new Vector2(transform.position.x, transform.position.y + 5);
+                    break;
+                case 4: //down
+                    targetPos = new Vector2(transform.position.x, transform.position.y - 5);
+                    break;
+            }
+            
+            //move away from player if less than 20 units away
+            dist = Vector2.Distance(transform.position, player.transform.position);
+            Debug.Log(dist);
+            if(dist < 20f)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+            }
+            
             cooldownTimer += Time.deltaTime;
         }
-        if (enemyPatrol != null)
+        else
         {
-            enemyPatrol.enabled = !PlayerInSight();
+            if(waypoints.Length > 0)
+            {
+                // get distance between waypoint and scanbot
+                dist = Vector2.Distance(transform.position, waypoints[waypointIndex].position);
+
+                //if scanbot is within certain range, increase index to next waypoint
+                if (dist < 2f)
+                {
+                    if (waitTime <= 0)
+                    {
+                        IncreaseIndex();
+                        waitTime = startWaitTime;
+                    }
+                    else
+                    {
+                        waitTime -= Time.deltaTime;
+                    }
+                }
+                Patrol();
+            }  
         }
-        targetDistance = (Vector2)target.position - (Vector2)rb.position;
-        if(targetDistance.x > 0) { transform.eulerAngles = new Vector2(0, 180); } else if (targetDistance.x < 0) { transform.eulerAngles = new Vector2(0, 0); }
-            
     }
 
     private bool PlayerInSight()
@@ -87,5 +135,19 @@ public class ScanbotAI : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y * range, boxCollider.bounds.size.z));
+    }
+
+    private void Patrol()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, waypoints[waypointIndex].position, speed * Time.deltaTime);
+    }
+
+    void IncreaseIndex()
+    {
+        waypointIndex++;
+        if(waypointIndex >= waypoints.Length)
+        {
+            waypointIndex = 0;
+        }
     }
 }
