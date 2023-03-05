@@ -33,7 +33,7 @@ public class DamageController : MonoBehaviour
     if(_healthController.playerHealth == 0){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    //gameObject.SetActive(false);
-   }
+        //gameObject.SetActive(false);
+    }
 
 }
