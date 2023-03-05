@@ -9,7 +9,8 @@ public class WeaponController : MonoBehaviour
     private int activePrimary = 0;
     private int activeSecondary = 0;
 
-    public GameObject wheelBase;
+    public Animator[] wheelList;
+    public Animator[] weaponList;
     public GameObject selector;
     public float angleOffset = 1.0f;
 
@@ -18,6 +19,11 @@ public class WeaponController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+        foreach (WeaponBase weapon in primaryWeapons)
+        {
+            weapon.Deactivate();
+        }
         primaryWeapons[0].GetComponent<WeaponBase>().Activate();
     }
 
@@ -30,15 +36,16 @@ public class WeaponController : MonoBehaviour
             weapIndex = WheelOpen();
         } else if (Input.GetKeyUp(KeyCode.Q)) { if (!(weapIndex > primaryWeapons.Length)) { SwapToP(weapIndex); } }
         //While the e key is down, open the wheel and record the index, upon release swap to the weapon index
-        else if (Input.GetKey(KeyCode.E))
+        /*else if (Input.GetKey(KeyCode.E))
         {
             weapIndex = WheelOpen();
         } else if (Input.GetKeyUp(KeyCode.E)) { if (!(weapIndex > secondaryWeapons.Length)) { SwapToS(weapIndex); } }
         //Close the wheel on releas of all of them
+        */
         else
         {
-            wheelBase.GetComponent<Animator>().SetBool("swapping", false);
-            selector.GetComponent<Animator>().SetBool("swapping", false);
+            foreach (Animator whel in wheelList) { whel.SetBool("swapping", false); }
+            foreach (Animator whel in weaponList) { whel.SetBool("swapping", false); }
         }
     }
 
@@ -46,6 +53,7 @@ public class WeaponController : MonoBehaviour
     {
         primaryWeapons[activePrimary].GetComponent<WeaponBase>().Deactivate();
         primaryWeapons[newActive].GetComponent<WeaponBase>().Activate();
+        activePrimary = newActive;
     }
     void SwapToS(int newActive)
     {
@@ -56,9 +64,9 @@ public class WeaponController : MonoBehaviour
     int WheelOpen()
     {
         //Activate Animations
-        wheelBase.GetComponent<Animator>().SetBool("swapping", true);
-        selector.GetComponent<Animator>().SetBool("swapping", true);
-        
+        foreach (Animator whel in wheelList) { whel.SetBool("swapping", true); }
+        foreach (Animator whel in weaponList) { whel.SetBool("swapping", true); }
+
         //Get the vector from one point to another
         Vector3 direction = Input.mousePosition - selector.transform.position;
         
