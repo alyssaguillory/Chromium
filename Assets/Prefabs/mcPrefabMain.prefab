@@ -356,7 +356,7 @@ Rigidbody2D:
   m_LinearDrag: 0.5
   m_AngularDrag: 0
   m_GravityScale: 20
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6c9f21b218e0d324f807455315fc9a48, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 100
-  CurrHealth: 0
+  CurrHealth: 100
   corpse: {fileID: 0}
   flash:
   - {fileID: 2542757527505871648}
@@ -515,8 +515,8 @@ MonoBehaviour:
   - {fileID: 3758277146717809826}
   - {fileID: 4182422122924765547}
   healthSpawner: {fileID: 0}
-  HealthBars: 3
-  CurrBars: 0
+  HealthBars: 1
+  CurrBars: 1
   regenWait: 2
 --- !u!114 &-2866948257775165817
 MonoBehaviour:

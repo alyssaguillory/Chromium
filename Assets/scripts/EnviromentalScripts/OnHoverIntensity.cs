@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Rendering.Universal;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class OnHoverIntensity : MonoBehaviour
 {
@@ -9,7 +10,10 @@ public class OnHoverIntensity : MonoBehaviour
     [SerializeField] float baseLight = 0.08f;
     [SerializeField] float hoverLight = 1.0f;
     [SerializeField] float checkRadius = 1.0f;
-    public float mag;
+    public UnityEvent buttonClick;
+    [SerializeField] AudioSource hoverSound;
+    [SerializeField] AudioSource clickSound;
+    private bool hover = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,17 +22,22 @@ public class OnHoverIntensity : MonoBehaviour
     private void Update()
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mag = (mousePosition - (Vector2)transform.position).magnitude;
-        if ( mag <= checkRadius) { MouseIsOver(); }
+        if ((mousePosition - (Vector2)transform.position).magnitude <= checkRadius) { 
+            MouseIsOver();
+            if (Input.GetKeyDown(KeyCode.Mouse0)) { buttonClick.Invoke(); clickSound.Play(); }
+        }
         else { MouseExit(); }
     }
     private void MouseIsOver()
     {
         lightChanger.intensity = hoverLight;
+        if (!hover) { hoverSound.Play(); }
+        hover = true;
     }
     private void MouseExit()
     {
         lightChanger.intensity = baseLight;
+        hover = false;
     }
 
     private void OnDrawGizmosSelected()
