@@ -22,13 +22,13 @@ TagManager:
   - EnemyClip
   - EnemyNoClip
   - Player
-  - Corpse
+  - PhysicsObject
   - Weapon
-  - HazardClip
-  - HazardNoClip
+  - HazardSolid
+  - Hazard
   - EnemyWeapon
-  - 
-  - 
+  - EnemyProjectile
+  - PlayerProjectile
   - 
   - 
   - 
@@ -55,12 +55,18 @@ TagManager:
   - name: InteractableObjects
     uniqueID: 3419029951
     locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
   - name: Enemy
     uniqueID: 778950761
     locked: 0
   - name: Player
     uniqueID: 4290665307
     locked: 0
-  - name: Default
-    uniqueID: 0
+  - name: Doors
+    uniqueID: 4158797049
+    locked: 0
+  - name: ForegroundObjects
+    uniqueID: 2764211689
     locked: 0
