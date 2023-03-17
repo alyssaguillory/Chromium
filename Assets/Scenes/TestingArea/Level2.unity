@@ -1671,6 +1671,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.51, y: 3.7767353}
   m_EdgeRadius: 0
+--- !u!114 &917486970 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6365484277380285691, guid: a0f16e428ab0cfa4aacb547dc86a8dce, type: 3}
+  m_PrefabInstance: {fileID: 234348985}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1c71a39698620488e77d51eb1d6adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &927950125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,7 +1845,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947677055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.5, y: -2.2, z: -10}
+  m_LocalPosition: {x: -67.1, y: 17.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3455,6 +3466,14 @@ PrefabInstance:
       propertyPath: weaponList.Array.data[1]
       value: 
       objectReference: {fileID: 1007217629}
+    - target: {fileID: 4182422122446748815, guid: a77b3bf24e03d2c4a8235a1aef727f53, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182422122446748822, guid: a77b3bf24e03d2c4a8235a1aef727f53, type: 3}
+      propertyPath: healthSpawner
+      value: 
+      objectReference: {fileID: 917486970}
     - target: {fileID: 4192376544412922750, guid: a77b3bf24e03d2c4a8235a1aef727f53, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: 0.00000071525574
