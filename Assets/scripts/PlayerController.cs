@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
    
 
     public float speed;
+    private float originalSpeed; //original speed before slowed down
+    private float minSpeed;
     public float jumpForce;
     private float moveInput;
     public bool isGrounded;
@@ -34,6 +36,10 @@ public class PlayerController : MonoBehaviour
     {
         //this is where we get the different components, and need to initialize new components we might use
         rb2D = GetComponent<Rigidbody2D>();
+        
+        //used for mouse slowing down player
+        originalSpeed = speed;
+        minSpeed = originalSpeed / 3f;
         
     }
 
@@ -152,6 +158,23 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(gameObject.GetComponent<Health>().DamageWithInvincible(0.5f, 20.0f));
         }
+    }
+
+    public virtual IEnumerator SlowedByMouse()
+    {
+        speed = 0;
+        yield return new WaitForSeconds(.25f);
+        speed = originalSpeed / 3f;
+
+        yield return new WaitForSeconds(.10f);
+        speed = originalSpeed / 2f;
+
+        yield return new WaitForSeconds(.10f);
+        speed = originalSpeed / 1.5f;
+
+        yield return new WaitForSeconds(.10f);
+        speed = originalSpeed;
+
     }
 
 

@@ -198,6 +198,7 @@ public class MouseAi : MonoBehaviour
         {
             Debug.Log("Bounds intersecting");
             StartCoroutine(target.gameObject.GetComponent<Health>().DamageWithInvincible(0.6f, 50.0f));
+            StartCoroutine(target.gameObject.GetComponent<PlayerController>().SlowedByMouse());
             dealtDamage = true;
         }
         padTime -= Time.deltaTime;

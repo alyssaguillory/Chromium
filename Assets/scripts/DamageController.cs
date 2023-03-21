@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class DamageController : MonoBehaviour
 {
    public Animator animator;
-    private float timer = 0.25f;
+   private float timer = 0.25f;
     // Start is called before the first frame update
    [SerializeField] private int touchDamage;
+   public string enemyType;
+
 
    [SerializeField] private HealthController _healthController;
 
@@ -21,8 +23,6 @@ public class DamageController : MonoBehaviour
             Damage();
 
         }
-        
-
    }
 
    void Damage()
@@ -35,5 +35,4 @@ public class DamageController : MonoBehaviour
     }
     //gameObject.SetActive(false);
    }
-
 }

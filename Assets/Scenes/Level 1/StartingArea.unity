@@ -1426,6 +1426,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152374672231389699, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
+      propertyPath: enemyType
+      value: Mouse
+      objectReference: {fileID: 0}
     - target: {fileID: 3152374672231389701, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
       propertyPath: target
       value: 
@@ -3783,6 +3787,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152374672231389699, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
+      propertyPath: enemyType
+      value: Mouse
+      objectReference: {fileID: 0}
     - target: {fileID: 3152374672231389701, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
       propertyPath: target
       value: 
@@ -6507,6 +6515,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152374672231389699, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
+      propertyPath: enemyType
+      value: Mouse
+      objectReference: {fileID: 0}
     - target: {fileID: 3152374672231389701, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
       propertyPath: target
       value: 
@@ -7742,6 +7754,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152374672231389699, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
+      propertyPath: enemyType
+      value: Mouse
+      objectReference: {fileID: 0}
     - target: {fileID: 3152374672231389701, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
       propertyPath: target
       value: 
@@ -8425,6 +8441,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152374672231389699, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
+      propertyPath: enemyType
+      value: Mouse
+      objectReference: {fileID: 0}
     - target: {fileID: 3152374672231389701, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
       propertyPath: target
       value: 
@@ -10076,6 +10096,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152374672231389699, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
+      propertyPath: enemyType
+      value: Mouse
+      objectReference: {fileID: 0}
     - target: {fileID: 3152374672231389701, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
       propertyPath: target
       value: 
@@ -12142,6 +12166,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152374672231389699, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
+      propertyPath: enemyType
+      value: Mouse
+      objectReference: {fileID: 0}
     - target: {fileID: 3152374672231389701, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
       propertyPath: target
       value: 
@@ -12962,6 +12990,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152374672231389699, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
+      propertyPath: enemyType
+      value: Mouse
+      objectReference: {fileID: 0}
     - target: {fileID: 3152374672231389701, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
       propertyPath: target
       value: 
@@ -19183,6 +19215,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152374672231389699, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
+      propertyPath: enemyType
+      value: Mouse
+      objectReference: {fileID: 0}
     - target: {fileID: 3152374672231389701, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
       propertyPath: target
       value: 
@@ -20356,6 +20392,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152374672231389699, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
+      propertyPath: enemyType
+      value: Mouse
+      objectReference: {fileID: 0}
     - target: {fileID: 3152374672231389701, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
       propertyPath: target
       value: 
@@ -21603,6 +21643,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152374672231389699, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
+      propertyPath: enemyType
+      value: Mouse
+      objectReference: {fileID: 0}
     - target: {fileID: 3152374672231389701, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
       propertyPath: target
       value: 
@@ -22253,6 +22297,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152374672231389699, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
+      propertyPath: enemyType
+      value: Mouse
+      objectReference: {fileID: 0}
     - target: {fileID: 3152374672231389701, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
       propertyPath: target
       value: 
@@ -22470,6 +22518,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152374672231389699, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
+      propertyPath: enemyType
+      value: Mouse
+      objectReference: {fileID: 0}
     - target: {fileID: 3152374672231389701, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
       propertyPath: target
       value: 
@@ -22553,6 +22605,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152374672231389699, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
+      propertyPath: enemyType
+      value: Mouse
+      objectReference: {fileID: 0}
     - target: {fileID: 3152374672231389701, guid: 60174b147b084394c9da20a0a24e61fc, type: 3}
       propertyPath: target
       value: 

@@ -164,6 +164,7 @@ MonoBehaviour:
   - {fileID: 4188258769992300344}
   - {fileID: 2451819926630674714}
   isStunned: 0
+  isElectric: 0
   stunDur: 0
   jumpForce: 500
   safeSpace: 15
@@ -204,6 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   touchDamage: 1
+  enemyType: Mouse
   _healthController: {fileID: 0}
 --- !u!1001 &1991764120226372281
 PrefabInstance:
