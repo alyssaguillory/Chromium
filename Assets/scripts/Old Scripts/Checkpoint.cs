@@ -7,6 +7,7 @@ public class Checkpoint : MonoBehaviour
 {
     public GameMaster gm; 
     [SerializeField] public SpriteRenderer kiosk;
+    private bool active = false;
 
 
   
@@ -17,9 +18,14 @@ public class Checkpoint : MonoBehaviour
         
     }
     void OnTriggerEnter2D(Collider2D other){
+        
         if(other.CompareTag("Player")){
+            if (!active) { 
+                kiosk.color = new Color32(11, 255, 22, 255);
+                other.GetComponent<Health>().CurrHealth = other.GetComponent<Health>().MaxHealth;
+            }
             gm.lastCheckPointPos = transform.position; 
-            kiosk.color = new Color32(11,255,22,255); 
+            
         }
 
     }

@@ -13,11 +13,15 @@ public class weaponPrimaryFist : WeaponBase
     public float throwSpeed = 10.0f;
     public float damagingRange = 0.5f;
     public bool returning;
+    private LineRenderer lr;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
         start = fist.localPosition;
+        lr = GetComponent<LineRenderer>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -25,6 +29,7 @@ public class weaponPrimaryFist : WeaponBase
     {
         if (isActive)
         {
+            RenderLine();
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             //Vector2 toHitSpot = (-(Vector2)transform.position + mousePosition).normalized * 3;
 
@@ -36,19 +41,17 @@ public class weaponPrimaryFist : WeaponBase
             if (returning) {
                 if ((Vector2)transform.localPosition != start)
                 {
-                    transform.localPosition = (Vector2)transform.localPosition - ((Vector2)transform.localPosition - start).normalized * throwSpeed * Time.deltaTime * 3;
-                    if (((Vector2)transform.localPosition - start).magnitude < 0.25)
-                    {
-                        transform.localPosition = start;
-                        returning = false;
-                    }
+                    transform.localPosition = Vector2.MoveTowards((Vector2)transform.localPosition, start, throwSpeed * Time.deltaTime);
+                    DamageCheck();
                 } else { returning = false; }
             } else if (Input.GetKey(KeyCode.Mouse0)) {
-                
-                if ((start - (Vector2)transform.localPosition).magnitude > attackRange || ((Vector2)transform.position-mousePosition).magnitude < 0.25) {
+                if((start - (Vector2)transform.localPosition).magnitude < attackRange && ((Vector2)transform.position-mousePosition).magnitude > 0.2)
+                {
+                    transform.position = Vector2.MoveTowards((Vector2)transform.position, mousePosition, throwSpeed * Time.deltaTime);
+                    DamageCheck();
+                }
+               else {
                     returning = true;
-                } else {
-                    transform.position = (Vector2)transform.position - ((Vector2)transform.position - mousePosition).normalized * throwSpeed * Time.deltaTime;
                     DamageCheck();
                 } 
 
@@ -56,6 +59,11 @@ public class weaponPrimaryFist : WeaponBase
                 returning = true;
             }
         }
+    }
+    void RenderLine()
+    {
+        lr.SetPosition(0, player.transform.position);
+        lr.SetPosition(1, transform.position);
     }
 
     public override void Deactivate()

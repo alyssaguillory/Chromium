@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
     //These are not used
     public bool spacebar;
-    public Transform buzzSaw;
+    //public Transform buzzSaw;
     private float horizonMultiplier;
 
 

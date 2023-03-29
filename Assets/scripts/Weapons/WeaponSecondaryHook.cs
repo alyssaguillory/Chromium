@@ -40,8 +40,7 @@ public class WeaponSecondaryHook : WeaponBase
         defaultHook = hookNode.transform.localPosition;
         defaultShoulder = shoulderNode.transform.localPosition;
 
-        Nodes.Add(shoulderNode);
-        Nodes.Add(hookNode);
+        
         if(CurrentPath != null) { StopCoroutine(CurrentPath); }
     }
 
@@ -51,6 +50,7 @@ public class WeaponSecondaryHook : WeaponBase
         //If the hook is activated (always true as of now)
         if (isActive)
         {
+            RenderLine();
             //Check if the hook is hanging 
                 //If it is not and the right mouse is clicked throw hook
                 
@@ -84,15 +84,21 @@ public class WeaponSecondaryHook : WeaponBase
         reset = true;
         hooked = false;
         StopCoroutine(CurrentPath);
+        foreach (GameObject node in Nodes)
+        {
+            Destroy(node);
+        }
     }
 
     IEnumerator Throw(Vector3 target)
     {
+        
+        direction = (target - gameObject.transform.position).normalized;
         reset = false;
         hooked = false;
-        while(gameObject.transform.position != direction && (gameObject.transform.localPosition-defaultHook).magnitude <= maxRange)
+        while((gameObject.transform.localPosition-defaultHook).magnitude <= maxRange)
         {
-            gameObject.transform.position = (Vector2)gameObject.transform.position + (Vector2)((direction - gameObject.transform.position).normalized * throwSpeed * Time.deltaTime);
+            gameObject.transform.position = (Vector2)gameObject.transform.position + (Vector2)(direction * throwSpeed * Time.deltaTime);
             yield return null;
         }
         if((gameObject.transform.localPosition - defaultHook).magnitude > maxRange) { StartCoroutine(Reel()); }
@@ -100,6 +106,29 @@ public class WeaponSecondaryHook : WeaponBase
         //while it isn't at target, move towards target
         //If it gets too far away, end and start reeling it in.
         
+    }
+
+    void RenderLine()
+    {
+        if (Nodes.Count > 2)
+        {
+            lr.SetVertexCount(Nodes.Count + 1);
+
+            for (int i = 0; i < Nodes.Count; i++)
+            {
+
+                lr.SetPosition(i, Nodes[i].transform.position);
+
+            }
+
+            lr.SetPosition(5, player.transform.position);
+        } else
+        {
+            lr.SetVertexCount(2);
+            lr.SetPosition(0, player.transform.position);
+            lr.SetPosition(1, transform.position);
+        }
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -109,6 +138,7 @@ public class WeaponSecondaryHook : WeaponBase
             Debug.Log("Hit");
             StopCoroutine(CurrentPath);
             gameObject.transform.SetParent(collision.collider.gameObject.transform);
+            RecalculateNodes();
             hooked = true;
         }
         //Check if the hook is being thrown
@@ -133,7 +163,32 @@ public class WeaponSecondaryHook : WeaponBase
         
     }
 
-    private void RecalculateNodes() { }
+    private void RecalculateNodes() {
+        foreach(GameObject node in Nodes)
+        {
+            Destroy(node);
+        }
+        int i = 0;
+        GameObject lastNode = (GameObject)Instantiate(node, transform.position, Quaternion.identity, transform);
+        lastNode.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        lastNode.GetComponent<HingeJoint2D>().autoConfigureConnectedAnchor = false;
+        lastNode.GetComponent<HingeJoint2D>().connectedAnchor = lastNode.transform.position;
+        while (Nodes.Count < 4)
+        {
+            i++;
+            GameObject go = (GameObject)Instantiate(node, transform.position - (transform.position-player.transform.position)*(i/5), Quaternion.identity, transform);
+
+            go.GetComponent<HingeJoint2D>().connectedBody = lastNode.GetComponent<Rigidbody2D>();
+            go.GetComponent<HingeJoint2D>().autoConfigureConnectedAnchor = false;
+
+            //lastNode = go;
+
+            
+            Nodes.Add(go);
+            lastNode = go;
+        }
+        player.GetComponent<HingeJoint2D>().connectedBody = lastNode.GetComponent<Rigidbody2D>();
+    }
 
     //On left click, throw hook
     //When hook hits something, stop it
