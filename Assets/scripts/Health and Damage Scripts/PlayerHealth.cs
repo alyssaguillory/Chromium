@@ -10,10 +10,12 @@ public class PlayerHealth : Health
     public int CurrBars;
     public float regenWait;
     IEnumerator regen;
+    public GameMaster gm;
     private void Start()
     {
         CurrBars = HealthBars;
         while (healthSpawner.Gears.Count < HealthBars) { healthSpawner.AddBar(); };
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
     }
     public override void Die()
     {
@@ -24,7 +26,8 @@ public class PlayerHealth : Health
             healthSpawner.redoHealth();
         }
         else {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            transform.position = gm.lastCheckPointPos;
         }
         Debug.Log("You Died");
     }
