@@ -1801,6 +1801,64 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &604637608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5899359536152579523, guid: a77b3bf24e03d2c4a8235a1aef727f53, type: 3}
+  m_PrefabInstance: {fileID: 1326563636}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &604637612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604637608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c66ab9cf590a254086badbb6398665d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRange: 60
+  throwSpeed: 150
+  moveVelocity: 300
+  angleAllowance: 45
+  fullForceAngle: 30
+  target: {x: 0, y: 0, z: 0}
+  player: {fileID: 275478772}
+  node: {fileID: 0}
+  climbSpeed: 0
+  Nodes: []
+  hookNode: {fileID: 604637608}
+  shoulderNode: {fileID: 604637608}
+  isActive: 1
+  reset: 1
+  hooked: 0
+--- !u!61 &604637613
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604637608}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.33, y: 1.12}
+  m_EdgeRadius: 0
 --- !u!1 &675106540
 GameObject:
   m_ObjectHideFlags: 0
@@ -4357,6 +4415,10 @@ PrefabInstance:
       propertyPath: healthSpawner
       value: 
       objectReference: {fileID: 917486970}
+    - target: {fileID: 4182422122446748863, guid: a77b3bf24e03d2c4a8235a1aef727f53, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4192376544412922750, guid: a77b3bf24e03d2c4a8235a1aef727f53, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: 0.00000071525574

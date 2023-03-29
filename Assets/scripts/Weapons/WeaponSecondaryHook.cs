@@ -23,11 +23,13 @@ public class WeaponSecondaryHook : WeaponBase
     [SerializeField] GameObject shoulderNode;
     private Vector3 defaultShoulder;
     public bool isActive;
+    public bool reset = true;
+    public bool hooked;
     RaycastHit2D hit;
     
-    private Vector2 direction;
+    private Vector3 direction;
     
-    IEnumerator CurrentPath;
+    public IEnumerator CurrentPath;
     
 
     // Start is called before the first frame update
@@ -40,6 +42,7 @@ public class WeaponSecondaryHook : WeaponBase
 
         Nodes.Add(shoulderNode);
         Nodes.Add(hookNode);
+        if(CurrentPath != null) { StopCoroutine(CurrentPath); }
     }
 
     // Update is called once per frame
@@ -57,33 +60,57 @@ public class WeaponSecondaryHook : WeaponBase
                 //Else check if the right mouse is clicked again
                     //If yes, pull it in.
             
-            if (CurrentPath == null)
+            if (reset)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse1))
                 {
-                    direction = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
+                    direction = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    Debug.Log(direction);
                     //hit = Physics2D.Raycast(transform.position, direction, MaxRange, whatIsGround);
                     //if (hit.collider != null) { CurrentPath = ThrowHit(); }
                     //else { CurrentPath = Throw(); }
+                    CurrentPath = Throw(direction);
                     StartCoroutine(CurrentPath);
                 }
+            } else if (hooked)
+            {
+                if (Input.GetKeyDown(KeyCode.Mouse1)) { StartCoroutine(Reel()); }
             }
         }
     }
     
     public void FullReset() //Resets the positions to defaults
     {
-
+        reset = true;
+        hooked = false;
+        StopCoroutine(CurrentPath);
     }
 
     IEnumerator Throw(Vector3 target)
     {
+        reset = false;
+        hooked = false;
+        while(gameObject.transform.position != direction && (gameObject.transform.localPosition-defaultHook).magnitude <= maxRange)
+        {
+            gameObject.transform.position = (Vector2)gameObject.transform.position + (Vector2)((direction - gameObject.transform.position).normalized * throwSpeed * Time.deltaTime);
+            yield return null;
+        }
+        if((gameObject.transform.localPosition - defaultHook).magnitude > maxRange) { StartCoroutine(Reel()); }
+        yield return null;
         //while it isn't at target, move towards target
         //If it gets too far away, end and start reeling it in.
-        yield return null;
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("Contact!");
+        if(!hooked)
+        {
+            Debug.Log("Hit");
+            StopCoroutine(CurrentPath);
+            gameObject.transform.SetParent(collision.collider.gameObject.transform);
+            hooked = true;
+        }
         //Check if the hook is being thrown
         //If yes then parent the hook to the hit object and set it to static and recalculate nodes
         //If enemy then start reeling it back in
@@ -93,10 +120,20 @@ public class WeaponSecondaryHook : WeaponBase
 
     IEnumerator Reel()
     {
+        gameObject.transform.SetParent(player.transform);
+        while (gameObject.transform.localPosition != defaultHook){
+            gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, defaultHook, throwSpeed * Time.deltaTime);
+            yield return null;
+        }
+        Debug.Log("Returned");
+        FullReset();
+        yield return null;
         //Ensure hooks parent is Player
         //Move hook towards shoulder point, then hook point
-        yield return null;
+        
     }
+
+    private void RecalculateNodes() { }
 
     //On left click, throw hook
     //When hook hits something, stop it
