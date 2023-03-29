@@ -287,6 +287,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Controls
       objectReference: {fileID: 0}
+    - target: {fileID: 8932193265061610056, guid: fea70770200ca624ba82ffd3b25d3636, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 56b1f4b96638f7842823cf38829bffc2, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: fea70770200ca624ba82ffd3b25d3636, type: 3}
