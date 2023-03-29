@@ -21549,7 +21549,7 @@ MonoBehaviour:
   - {fileID: 197439823}
   speed: 3.5
   startWaitTime: 1.25
-  direction: 1
+  direction: 3
 --- !u!114 &1168783973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23201,11 +23201,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: a826834cf52ae1b43a41a2be6c61cccd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 186.33002
+      value: 314.1
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: a826834cf52ae1b43a41a2be6c61cccd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.94469786
+      value: 6.4
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: a826834cf52ae1b43a41a2be6c61cccd, type: 3}
       propertyPath: m_LocalPosition.z
