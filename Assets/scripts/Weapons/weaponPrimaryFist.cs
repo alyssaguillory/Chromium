@@ -86,7 +86,7 @@ public class weaponPrimaryFist : WeaponBase
         {
             if (enemy.GetComponent<Enemy>() != null)
             {
-                enemy.GetComponent<Enemy>().TakeDamage(1);
+                enemy.GetComponent<Enemy>().TakeDamage(10);
             }
             if (enemy.GetComponent<Health>() != null && enemy.gameObject.tag != "Player")
             {
