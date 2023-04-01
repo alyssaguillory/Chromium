@@ -15138,7 +15138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  gm: {fileID: 0}
+  gm: {fileID: 1576012682}
   levelName: BossIncenerator
   been_there_flag: 0
 --- !u!212 &795985040

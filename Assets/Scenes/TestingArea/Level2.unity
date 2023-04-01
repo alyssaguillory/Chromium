@@ -10945,6 +10945,10 @@ PrefabInstance:
       propertyPath: healthSpawner
       value: 
       objectReference: {fileID: 917486970}
+    - target: {fileID: 6454939187739195043, guid: 6ee92146a8a1561499b877dd939be2fa, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6610434399432272798, guid: 6ee92146a8a1561499b877dd939be2fa, type: 3}
       propertyPath: selector
       value: 
