@@ -8064,6 +8064,7 @@ MonoBehaviour:
   gm: {fileID: 0}
   levelName: 3. Puzzle Room
   been_there_flag: 0
+  nextLevelPoint: {x: 0, y: 0}
 --- !u!212 &434886000
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15736,6 +15737,7 @@ MonoBehaviour:
   gm: {fileID: 1576012682}
   levelName: BossIncenerator
   been_there_flag: 0
+  nextLevelPoint: {x: -402, y: -6}
 --- !u!212 &795985040
 SpriteRenderer:
   m_ObjectHideFlags: 0
