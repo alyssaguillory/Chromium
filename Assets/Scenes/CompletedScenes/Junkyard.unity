@@ -204,7 +204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &31907815
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -349,7 +348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &33082474
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -639,7 +637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &67615459
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -784,7 +781,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &76956160
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -3117,7 +3113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &142450148
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -3519,7 +3514,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.03
+  m_Intensity: 0.12
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: b52f2176abd04a14bf41cacb0000000069d86d2e5b5bbefff934e2f7e985c2a4
@@ -4994,7 +4989,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &260632531
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -5995,7 +5989,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &315628684
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -7156,7 +7149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6454939187739195043, guid: 6ee92146a8a1561499b877dd939be2fa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6610434399432272798, guid: 6ee92146a8a1561499b877dd939be2fa, type: 3}
       propertyPath: selector
@@ -7205,6 +7198,14 @@ PrefabInstance:
     - target: {fileID: 8030902234490840461, guid: 6ee92146a8a1561499b877dd939be2fa, type: 3}
       propertyPath: m_Name
       value: mcPrefabMain
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090882256098350183, guid: 6ee92146a8a1561499b877dd939be2fa, type: 3}
+      propertyPath: isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090882256098350183, guid: 6ee92146a8a1561499b877dd939be2fa, type: 3}
+      propertyPath: throwSpeed
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 9204063361564474862, guid: 6ee92146a8a1561499b877dd939be2fa, type: 3}
       propertyPath: m_RootOrder
@@ -7468,7 +7469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &424184472
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -9597,7 +9597,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &559521266
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -9742,7 +9741,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &561266778
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -10584,7 +10582,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &632473850
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -10729,7 +10726,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &638569065
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -12004,7 +12000,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &686830565
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -12149,7 +12144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &687424049
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -12564,7 +12558,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &705491635
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -13614,7 +13607,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &748080696
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -14376,7 +14368,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &765807323
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -14632,7 +14623,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &773779798
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -18494,7 +18484,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &983138578
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -19052,7 +19041,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1031748408
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -19503,7 +19491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1051899657
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -19648,7 +19635,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1052313534
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -20249,7 +20235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1078139993
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -22642,7 +22627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1333438642
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -22787,7 +22771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1340370696
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -23058,7 +23041,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1351329942
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -24814,7 +24796,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1417914232
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -25437,7 +25418,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1447364645
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -25582,7 +25562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1476381651
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -26199,7 +26178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1551805592
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -27113,7 +27091,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1618066711
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -27843,7 +27820,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1632694654
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -28500,7 +28476,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1643816534
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -28966,7 +28941,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1668818278
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -29367,7 +29341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1723205199
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -29920,7 +29893,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1740979725
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -31426,7 +31398,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1914623150
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -31714,7 +31685,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1952632123
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -31925,7 +31895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1960214493
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -32385,7 +32354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &1981391865
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -32729,7 +32697,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &2015937653
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -36694,7 +36661,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &2110120231
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -37183,7 +37149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329fde400112e7941b2f62e6ab36833d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &2137113915
 PlatformEffector2D:
   m_ObjectHideFlags: 0
