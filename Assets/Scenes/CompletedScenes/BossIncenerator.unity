@@ -50434,7 +50434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561439805}
   m_LocalRotation: {x: 0.008726558, y: -0, z: -0, w: 0.999962}
-  m_LocalPosition: {x: -88, y: -6.9, z: -0.005690813}
+  m_LocalPosition: {x: 16.2, y: -76.8, z: -0.005690813}
   m_LocalScale: {x: 2, y: 2.3999999, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -133424,7 +133424,7 @@ PrefabInstance:
     - target: {fileID: 6610434399432272798, guid: 6ee92146a8a1561499b877dd939be2fa, type: 3}
       propertyPath: selector
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1737797047}
     - target: {fileID: 6610434399432272798, guid: 6ee92146a8a1561499b877dd939be2fa, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -133814,6 +133814,11 @@ MonoBehaviour:
   boss: {fileID: 705996455}
   active: 0
   current: {x: 0, y: 0}
+--- !u!1 &1737797047 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3511125354964550019, guid: a0f16e428ab0cfa4aacb547dc86a8dce, type: 3}
+  m_PrefabInstance: {fileID: 1386514192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1767089097
 PrefabInstance:
   m_ObjectHideFlags: 0

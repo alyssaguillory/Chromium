@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class WeaponSecondaryHook : WeaponBase
 {
-    public float maxRange = 60, throwSpeed = 3;
+    public float maxRange = 60, throwSpeed = 3, thrownForce = 300f;
     public float moveVelocity = 300, angleAllowance = 45, fullForceAngle=30;
+    public int nodeCount = 5;
     
     public Vector3 target;
+    public Vector2 pushing;
 
     [SerializeField] GameObject player;
+    [SerializeField] GameObject baseNode;
     [SerializeField] GameObject node;
     [SerializeField] float climbSpeed;
 
@@ -38,7 +41,7 @@ public class WeaponSecondaryHook : WeaponBase
         lr = GetComponent<LineRenderer>();
         
         defaultHook = hookNode.transform.localPosition;
-        defaultShoulder = shoulderNode.transform.localPosition;
+        defaultShoulder = hookNode.transform.localPosition;
 
         
         if(CurrentPath != null) { StopCoroutine(CurrentPath); }
@@ -75,19 +78,56 @@ public class WeaponSecondaryHook : WeaponBase
             } else if (hooked)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse1)) { StartCoroutine(Reel()); }
+                if (Input.GetKeyUp(KeyCode.W)) { RecalculateNodes(); }
             }
         }
     }
-    
+    private void FixedUpdate()
+    {
+        if (isActive)
+        {
+            if (hooked)
+            {
+                
+                if (Input.GetKey(KeyCode.W)) { Push(); }
+            }
+        }
+    }
+
     public void FullReset() //Resets the positions to defaults
     {
-        reset = true;
-        hooked = false;
-        StopCoroutine(CurrentPath);
         foreach (GameObject node in Nodes)
         {
             Destroy(node);
         }
+        Nodes.Clear();
+        reset = true;
+        hooked = false;
+        StopCoroutine(CurrentPath);
+    }
+    public void Push()
+    {
+        
+        if(Nodes.Count > 0)
+        {
+            foreach (GameObject node in Nodes)
+            {
+                Destroy(node);
+            }
+            Nodes.Clear();
+        }
+        
+        pushing = (hookNode.transform.position - player.transform.position);
+        Vector2 mouseDirection = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - player.transform.position);
+        pushing = pushing.normalized;
+        mouseDirection = mouseDirection.normalized;
+        float angle = Vector2.Angle(mouseDirection, pushing);
+        if(angle < fullForceAngle) { pushing = pushing + mouseDirection; }
+        else if(angle < angleAllowance) { 
+            mouseDirection = mouseDirection * ((angle - fullForceAngle) / (angleAllowance - fullForceAngle));
+            pushing = pushing + mouseDirection; 
+        }
+        player.GetComponent<Rigidbody2D>().AddForce(pushing * thrownForce);
     }
 
     IEnumerator Throw(Vector3 target)
@@ -110,9 +150,9 @@ public class WeaponSecondaryHook : WeaponBase
 
     void RenderLine()
     {
-        if (Nodes.Count > 2)
+        if (Nodes.Count > 0)
         {
-            lr.SetVertexCount(Nodes.Count + 1);
+            lr.positionCount = Nodes.Count;
 
             for (int i = 0; i < Nodes.Count; i++)
             {
@@ -121,15 +161,16 @@ public class WeaponSecondaryHook : WeaponBase
 
             }
 
-            lr.SetPosition(5, player.transform.position);
+            //lr.SetPosition(5, player.transform.position);
         } else
         {
-            lr.SetVertexCount(2);
-            lr.SetPosition(0, player.transform.position);
-            lr.SetPosition(1, transform.position);
+            lr.positionCount = 2;
+            lr.SetPosition(0, shoulderNode.transform.position);
+            lr.SetPosition(1, hookNode.transform.position);
         }
 
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Contact!");
@@ -150,7 +191,10 @@ public class WeaponSecondaryHook : WeaponBase
 
     IEnumerator Reel()
     {
+        hooked = true;
+        Vector2 currVel = player.GetComponent<Rigidbody2D>().velocity;
         gameObject.transform.SetParent(player.transform);
+        player.GetComponent<Rigidbody2D>().velocity = currVel;
         while (gameObject.transform.localPosition != defaultHook){
             gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, defaultHook, throwSpeed * Time.deltaTime);
             yield return null;
@@ -168,26 +212,33 @@ public class WeaponSecondaryHook : WeaponBase
         {
             Destroy(node);
         }
-        int i = 0;
-        GameObject lastNode = (GameObject)Instantiate(node, transform.position, Quaternion.identity, transform);
-        lastNode.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-        lastNode.GetComponent<HingeJoint2D>().autoConfigureConnectedAnchor = false;
-        lastNode.GetComponent<HingeJoint2D>().connectedAnchor = lastNode.transform.position;
-        while (Nodes.Count < 4)
+        Nodes.Clear();
+        //Start node is a static Rigidbody2D that has its points start at a natural spot
+        GameObject startNode = (GameObject)Instantiate(baseNode, hookNode.transform.position, Quaternion.identity, hookNode.transform);
+        Vector3 hookVec = (hookNode.transform.position - shoulderNode.transform.position);
+        float hookMag = hookVec.magnitude;
+        Vector3 nodeDistance =  hookVec / nodeCount;
+        //New Node 1 is the first node which all others rotate around
+        GameObject newNode = (GameObject)Instantiate(node, startNode.transform.position - nodeDistance, Quaternion.identity, hookNode.transform);
+        newNode.GetComponent<HingeJoint2D>().connectedBody = startNode.GetComponent<Rigidbody2D>();
+        //newNode.GetComponent<HingeJoint2D>().connectedAnchor = -(Vector2)(hookVec / (6.66666666f));
+        Nodes.Add(startNode);
+        Nodes.Add(newNode);
+        GameObject lastNode = newNode;
+        while (Nodes.Count <= nodeCount)
         {
-            i++;
-            GameObject go = (GameObject)Instantiate(node, transform.position - (transform.position-player.transform.position)*(i/5), Quaternion.identity, transform);
-
-            go.GetComponent<HingeJoint2D>().connectedBody = lastNode.GetComponent<Rigidbody2D>();
-            go.GetComponent<HingeJoint2D>().autoConfigureConnectedAnchor = false;
-
-            //lastNode = go;
-
-            
-            Nodes.Add(go);
-            lastNode = go;
+            //Then instatniate a new node a distance away
+            newNode = (GameObject)Instantiate(node, lastNode.transform.position - nodeDistance, Quaternion.identity, hookNode.transform);
+            newNode.GetComponent<HingeJoint2D>().connectedBody = lastNode.GetComponent<Rigidbody2D>();
+            //newNode.GetComponent<HingeJoint2D>().connectedAnchor = -(Vector2)(hookVec/(6.66666666f));
+            Nodes.Add(newNode);
+            lastNode = newNode;
         }
+        player.GetComponent<HingeJoint2D>().enabled = true;
         player.GetComponent<HingeJoint2D>().connectedBody = lastNode.GetComponent<Rigidbody2D>();
+
+        //lastNode.GetComponent<HingeJoint2D>().connectedBody = player.GetComponent<Rigidbody2D>();
+        //lastNode.GetComponent<HingeJoint2D>().connectedAnchor = -((startNode.transform.position - player.transform.position).normalized * nodeDistance);
     }
 
     //On left click, throw hook
