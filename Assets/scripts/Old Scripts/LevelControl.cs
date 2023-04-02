@@ -8,7 +8,8 @@ public class LevelControl : MonoBehaviour
     public int index;
     public GameMaster gm;
     public string levelName;
-    public bool been_there_flag = false; 
+    public bool been_there_flag = false;
+    public Vector2 nextLevelPoint;
     
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,7 @@ public class LevelControl : MonoBehaviour
         {
             //SceneManager.LoadScene(1);
             SceneManager.LoadScene(levelName);
-            gm.lastCheckPointPos = new Vector2(-113.0f, -4.0f);
+            gm.lastCheckPointPos = nextLevelPoint;
         }
         /*if(other.CompareTag("Player") && been_there_flag == true)
         {
