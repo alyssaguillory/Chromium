@@ -5,11 +5,13 @@ using UnityEngine;
 public class PlatformInversion : MonoBehaviour
 {
     private PlatformEffector2D effector;
-    public float waitTime = 0.5f;
+    private float waitTime = 0.01f;
+    private float baseWait;
     // Start is called before the first frame update
     void Start()
     {
         effector = GetComponent<PlatformEffector2D>();
+        baseWait = waitTime;
     }
 
     // Update is called once per frame
@@ -20,7 +22,7 @@ public class PlatformInversion : MonoBehaviour
             if(waitTime <= 0)
             {
                 effector.rotationalOffset = 180f;
-                waitTime = 0.25f;
+                waitTime = baseWait;
             } else
             {
                 waitTime -= Time.deltaTime;
@@ -29,7 +31,7 @@ public class PlatformInversion : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.S))
         {
             effector.rotationalOffset = 0.0f;
-            waitTime = 0.25f;
+            waitTime = baseWait;
         }
     }
 }

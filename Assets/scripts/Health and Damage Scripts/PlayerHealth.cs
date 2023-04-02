@@ -26,8 +26,8 @@ public class PlayerHealth : Health
             healthSpawner.redoHealth();
         }
         else {
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            transform.position = gm.lastCheckPointPos;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //transform.position = gm.lastCheckPointPos;
         }
         Debug.Log("You Died");
     }
