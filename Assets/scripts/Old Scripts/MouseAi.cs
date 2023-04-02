@@ -196,7 +196,7 @@ public class MouseAi : MonoBehaviour
         }
         if (rb.gameObject.GetComponent<Collider2D>().bounds.Intersects(target.gameObject.GetComponent<Collider2D>().bounds) && !dealtDamage)
         {
-            Debug.Log("Bounds intersecting");
+            //Debug.Log("Bounds intersecting");
             StartCoroutine(target.gameObject.GetComponent<Health>().DamageWithInvincible(0.6f, 50.0f));
             dealtDamage = true;
         }
@@ -257,7 +257,7 @@ public class MouseAi : MonoBehaviour
     }
     public IEnumerator Stun(float stunLength)
     {
-        Debug.Log("We working?");
+        //Debug.Log("We working?");
         isStunned = true;
         
         while (stunLength > 0)
@@ -269,7 +269,7 @@ public class MouseAi : MonoBehaviour
                 dissapate();
                 Recharge = 2.5f;
             }
-            Debug.Log("We stunned?");
+            //Debug.Log("We stunned?");
             yield return null;
         }
         isStunned = false;

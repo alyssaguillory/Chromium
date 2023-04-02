@@ -64,7 +64,7 @@ public class weaponPrimarySaw : WeaponBase
             if (enemy.GetComponent<Enemy>() != null)
             {
 
-                //enemy.GetComponent<Enemy>().TakeDamage(5);
+                enemy.GetComponent<Enemy>().TakeDamage(3);
             }
             if (enemy.GetComponent<Health>() != null && enemy.gameObject.tag != "Player")
             {
