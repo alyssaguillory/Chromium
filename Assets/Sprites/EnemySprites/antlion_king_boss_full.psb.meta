@@ -6893,10 +6893,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
-      width: 2137
-      height: 1399
+      x: 0
+      y: 0
+      width: 2141
+      height: 1405
     spriteID: b380bde6ec4d8e14eb21e6ad18725f95
     spriteBone:
     - name: bone_9
