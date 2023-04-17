@@ -1,0 +1,1077 @@
+fileFormatVersion: 2
+guid: 696533f7d83b734458aa3fc88d3df52f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Body Seg 10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 489
+      y: 1411
+      width: 530
+      height: 170
+    spriteID: dcf6df7310fcab546bdf932d987b29d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -454, y: 700}
+  - name: Body Seg 9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2579
+      y: 1152
+      width: 656
+      height: 219
+    spriteID: c283d020678002146aa08f28cb2077bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1699, y: 367}
+  - name: Body Seg 8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2921
+      y: 514
+      width: 694
+      height: 245
+    spriteID: 47756b0eae69f634d887226d74a7bdda
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2059, y: -350}
+  - name: Body Seg 7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3278
+      y: 824
+      width: 726
+      height: 260
+    spriteID: 1ba5978b441f613478a722b3320fe97a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2434, y: -143}
+  - name: Body Seg 6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2149
+      y: 514
+      width: 764
+      height: 302
+    spriteID: 365a1436e5b382248a9e7e6578a2e281
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1323, y: -595}
+  - name: Body Seg 5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2874
+      y: 4
+      width: 739
+      height: 352
+    spriteID: 558d7376d9cbaa24bbff14ef7a05dfea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2034, y: -1229}
+  - name: Body Seg 4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2579
+      y: 824
+      width: 691
+      height: 320
+    spriteID: 84af96846a4210d4f895c5ad4960b30e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1716, y: -590}
+  - name: Body Seg 3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3278
+      y: 1092
+      width: 627
+      height: 287
+    spriteID: f9142f06e17d89845a6403ffa2294519
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2381, y: -516}
+  - name: Body Seg 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1411
+      width: 477
+      height: 263
+    spriteID: 64e4213f87a3b36429a6b09453dd83d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -967, y: -400}
+  - name: Body Seg 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 2137
+      height: 1399
+    spriteID: f1ef332bf2196544d98964b350517b1f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -137, y: -1047}
+  - name: L Wrist
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4012
+      y: 968
+      width: 77
+      height: 44
+    spriteID: 6f14a97db1da15a46b2df78cd3923638
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3743, y: -1008}
+  - name: L Claw 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3913
+      y: 1092
+      width: 98
+      height: 184
+    spriteID: 9e5953c891e86224ca0f84be99514fb6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3700, y: -902}
+  - name: L Claw 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3400
+      y: 364
+      width: 188
+      height: 140
+    spriteID: 3fdb248cdf0847f49ac7f582819f6bfd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3100, y: -1619}
+  - name: L Leg Seg 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3621
+      y: 197
+      width: 195
+      height: 168
+    spriteID: b28f0714b5b77c14cbecda05d1569f6c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2755, y: -1675}
+  - name: L Leg Seg 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3623
+      y: 514
+      width: 442
+      height: 185
+    spriteID: 224e9e7d1fe699c449683377934a056c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3117, y: -1251}
+  - name: L Leg Seg 3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2063
+      y: 1411
+      width: 271
+      height: 115
+    spriteID: ad77d6deb915c9f4092b4064b725cca0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1750, y: -370}
+  - name: L Leg Seg 4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4012
+      y: 824
+      width: 58
+      height: 136
+    spriteID: 2ac149b79fa3d7a43942b8e8d7c503a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3719, y: -1038}
+  - name: R Wrist
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4012
+      y: 1020
+      width: 77
+      height: 44
+    spriteID: e7ae0209e4d9b37499125e6d0e6d9720
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1938, y: -956}
+  - name: R Claw 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1682
+      width: 98
+      height: 184
+    spriteID: 6c0847fbae8cbd344bf8faf9c4ecda71
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -2105, y: -312}
+  - name: R Claw 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2063
+      y: 1534
+      width: 188
+      height: 140
+    spriteID: 1780cdcf4ac59444bbd3da36e5fbef46
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: -449}
+  - name: R Leg Seg 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3824
+      y: 197
+      width: 195
+      height: 168
+    spriteID: ee434651dd4699c4f811f2a2474e543b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2465, y: -1675}
+  - name: R Leg Seg 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3621
+      y: 4
+      width: 442
+      height: 185
+    spriteID: 847aeac5edd23014b940e9290d1fc04c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2149, y: -1761}
+  - name: R Leg Seg 3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2342
+      y: 1411
+      width: 271
+      height: 115
+    spriteID: 300df063b92e5174c8671027c928a07c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 506, y: -370}
+  - name: R Leg Seg 4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4027
+      y: 197
+      width: 58
+      height: 136
+    spriteID: a2b75befcdf054a4495a47f5f540092c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1958, y: -1665}
+  - name: Head
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2149
+      y: 824
+      width: 422
+      height: 526
+    spriteID: 20de9bc7197749e449d6e72bc2f6d797
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1151, y: -1342}
+  - name: Yellow eye
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1027
+      y: 1411
+      width: 510
+      height: 147
+    spriteID: 3aa3319406678b44d87c70cd33baeacc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: -1123}
+  - name: Red eye
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1545
+      y: 1411
+      width: 510
+      height: 147
+    spriteID: 4e428159fef61344d96bdefaac24250d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 591, y: -1123}
+  - name: Pincer 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2874
+      y: 364
+      width: 518
+      height: 133
+    spriteID: eaf2a149fdc947c4c9e85b663fa28443
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1926, y: -2260}
+  - name: Pincers 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2149
+      y: 4
+      width: 717
+      height: 502
+    spriteID: 265fd7b41695af04aac0b5f9919dbf39
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1298, y: -2698}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  padding: 4
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Body
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 6714e3057e32e2742870f6478fe5d92b
+    layerID: 25
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Body Seg 10
+    spriteName: Body Seg 10
+    isGroup: 0
+    parentIndex: 0
+    spriteID: dcf6df7310fcab546bdf932d987b29d9
+    layerID: 24
+    mosaicPosition: {x: 489, y: 1411}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Body Seg 9
+    spriteName: Body Seg 9
+    isGroup: 0
+    parentIndex: 0
+    spriteID: c283d020678002146aa08f28cb2077bf
+    layerID: 23
+    mosaicPosition: {x: 2579, y: 1152}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Body Seg 8
+    spriteName: Body Seg 8
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 47756b0eae69f634d887226d74a7bdda
+    layerID: 22
+    mosaicPosition: {x: 2921, y: 514}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Body Seg 7
+    spriteName: Body Seg 7
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 1ba5978b441f613478a722b3320fe97a
+    layerID: 21
+    mosaicPosition: {x: 3278, y: 824}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Body Seg 6
+    spriteName: Body Seg 6
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 365a1436e5b382248a9e7e6578a2e281
+    layerID: 20
+    mosaicPosition: {x: 2149, y: 514}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Body Seg 5
+    spriteName: Body Seg 5
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 558d7376d9cbaa24bbff14ef7a05dfea
+    layerID: 19
+    mosaicPosition: {x: 2874, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Body Seg 4
+    spriteName: Body Seg 4
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 84af96846a4210d4f895c5ad4960b30e
+    layerID: 18
+    mosaicPosition: {x: 2579, y: 824}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Body Seg 3
+    spriteName: Body Seg 3
+    isGroup: 0
+    parentIndex: 0
+    spriteID: f9142f06e17d89845a6403ffa2294519
+    layerID: 17
+    mosaicPosition: {x: 3278, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Body Seg 2
+    spriteName: Body Seg 2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 64e4213f87a3b36429a6b09453dd83d8
+    layerID: 16
+    mosaicPosition: {x: 4, y: 1411}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Body Seg 1
+    spriteName: Body Seg 1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: f1ef332bf2196544d98964b350517b1f
+    layerID: 15
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Left Arm
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 33ba39a826745314495947564aa5f8ca
+    layerID: 60
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: L Wrist
+    spriteName: L Wrist
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 6f14a97db1da15a46b2df78cd3923638
+    layerID: 59
+    mosaicPosition: {x: 4012, y: 968}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: L Claw 1
+    spriteName: L Claw 1
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 9e5953c891e86224ca0f84be99514fb6
+    layerID: 58
+    mosaicPosition: {x: 3913, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: L Claw 2
+    spriteName: L Claw 2
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 3fdb248cdf0847f49ac7f582819f6bfd
+    layerID: 57
+    mosaicPosition: {x: 3400, y: 364}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: L Leg Seg 1
+    spriteName: L Leg Seg 1
+    isGroup: 0
+    parentIndex: 11
+    spriteID: b28f0714b5b77c14cbecda05d1569f6c
+    layerID: 56
+    mosaicPosition: {x: 3621, y: 197}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: L Leg Seg 2
+    spriteName: L Leg Seg 2
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 224e9e7d1fe699c449683377934a056c
+    layerID: 55
+    mosaicPosition: {x: 3623, y: 514}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: L Leg Seg 3
+    spriteName: L Leg Seg 3
+    isGroup: 0
+    parentIndex: 11
+    spriteID: ad77d6deb915c9f4092b4064b725cca0
+    layerID: 54
+    mosaicPosition: {x: 2063, y: 1411}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: L Leg Seg 4
+    spriteName: L Leg Seg 4
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 2ac149b79fa3d7a43942b8e8d7c503a3
+    layerID: 53
+    mosaicPosition: {x: 4012, y: 824}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Right Arm
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: eea696547e0d1704aa8f4de7c155fbad
+    layerID: 69
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: R Wrist
+    spriteName: R Wrist
+    isGroup: 0
+    parentIndex: 19
+    spriteID: e7ae0209e4d9b37499125e6d0e6d9720
+    layerID: 68
+    mosaicPosition: {x: 4012, y: 1020}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: R Claw 1
+    spriteName: R Claw 1
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 6c0847fbae8cbd344bf8faf9c4ecda71
+    layerID: 67
+    mosaicPosition: {x: 4, y: 1682}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: R Claw 2
+    spriteName: R Claw 2
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 1780cdcf4ac59444bbd3da36e5fbef46
+    layerID: 66
+    mosaicPosition: {x: 2063, y: 1534}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: R Leg Seg 1
+    spriteName: R Leg Seg 1
+    isGroup: 0
+    parentIndex: 19
+    spriteID: ee434651dd4699c4f811f2a2474e543b
+    layerID: 65
+    mosaicPosition: {x: 3824, y: 197}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: R Leg Seg 2
+    spriteName: R Leg Seg 2
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 847aeac5edd23014b940e9290d1fc04c
+    layerID: 64
+    mosaicPosition: {x: 3621, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: R Leg Seg 3
+    spriteName: R Leg Seg 3
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 300df063b92e5174c8671027c928a07c
+    layerID: 63
+    mosaicPosition: {x: 2342, y: 1411}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: R Leg Seg 4
+    spriteName: R Leg Seg 4
+    isGroup: 0
+    parentIndex: 19
+    spriteID: a2b75befcdf054a4495a47f5f540092c
+    layerID: 62
+    mosaicPosition: {x: 4027, y: 197}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Head
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: ad9197cf80048644c90192dd67271456
+    layerID: 13
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Head
+    spriteName: Head
+    isGroup: 0
+    parentIndex: 27
+    spriteID: 20de9bc7197749e449d6e72bc2f6d797
+    layerID: 12
+    mosaicPosition: {x: 2149, y: 824}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Eyes
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 57adf961d14a8374394ff1a70ca5d474
+    layerID: 10
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Yellow eye
+    spriteName: Yellow eye
+    isGroup: 0
+    parentIndex: 29
+    spriteID: 3aa3319406678b44d87c70cd33baeacc
+    layerID: 9
+    mosaicPosition: {x: 1027, y: 1411}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Red eye
+    spriteName: Red eye
+    isGroup: 0
+    parentIndex: 29
+    spriteID: 4e428159fef61344d96bdefaac24250d
+    layerID: 8
+    mosaicPosition: {x: 1545, y: 1411}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Pincers
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 198e307def866bf41aea049fa4200164
+    layerID: 6
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Pincer 1
+    spriteName: Pincer 1
+    isGroup: 0
+    parentIndex: 32
+    spriteID: eaf2a149fdc947c4c9e85b663fa28443
+    layerID: 5
+    mosaicPosition: {x: 2874, y: 364}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Pincers 2
+    spriteName: Pincers 2
+    isGroup: 0
+    parentIndex: 32
+    spriteID: 265fd7b41695af04aac0b5f9919dbf39
+    layerID: 4
+    mosaicPosition: {x: 2149, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Background
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4f0dfdbea962afe4f8aebb6adc28e93b
+    layerID: 2
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
