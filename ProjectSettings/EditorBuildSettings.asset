@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/CompletedScenes/BossIncenerator.unity
     guid: 04ae63bdec2729a44b8bdbdf58d893ce
   - enabled: 1
-    path: Assets/Scenes/InProgress/Level2.unity
+    path: Assets/Scenes/TestingArea/Level2.unity
     guid: 2616871486fd93f4596cb68878df4885
   - enabled: 1
     path: Assets/Scenes/UIScenes/ThanksForPlaying.unity
