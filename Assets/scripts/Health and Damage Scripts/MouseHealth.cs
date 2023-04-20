@@ -5,9 +5,17 @@ using UnityEngine;
 public class MouseHealth : Health
 {
     [SerializeField] MouseAi ActiveAi;
+    AudioSource audioHurt;
+
+    private void Start()
+    {
+        audioHurt = GetComponent<AudioSource>();
+    }
+    
     public override void Damage(float damage)
     {
         Debug.Log("We working?");
+        audioHurt.Play();
         Debug.Log(ActiveAi.isElectric);
         if (ActiveAi.isElectric)
         {

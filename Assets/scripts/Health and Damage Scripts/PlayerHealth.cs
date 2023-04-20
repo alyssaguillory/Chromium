@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : Health
 {
     [SerializeField] GearSpawner healthSpawner;
+    //[SerializeField] CanvasGroup canvasGroup;
     public int HealthBars = 1;
     public int CurrBars;
     public float regenWait;
@@ -24,10 +25,10 @@ public class PlayerHealth : Health
         audioData = GetComponents<AudioSource>();
         audioHurt = audioData[0];
         audioDie = audioData[1];
+
     }
     public override void Die()
     {
-        audioDie.Play();
         if (CurrBars > 1)
         {
             CurrBars--;
@@ -36,7 +37,6 @@ public class PlayerHealth : Health
         }
         else {
             StartCoroutine(waiter());
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             //transform.position = gm.lastCheckPointPos;
         }
         
@@ -73,7 +73,13 @@ public class PlayerHealth : Health
 
     IEnumerator waiter()
     {
-        yield return new WaitForSeconds(4);
+        if (!audioDie.isPlaying)
+        {
+            audioDie.Play();
+        }
+        GameObject.Find("CanvasGroup").GetComponent<FadeScript>().ShowUI();
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }

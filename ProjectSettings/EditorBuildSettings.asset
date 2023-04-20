@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/UIScenes/Options.unity
     guid: 2305c249b5195024c84dd6c214fbcc3b
+  - enabled: 1
+    path: Assets/Scenes/CompletedScenes/Death.unity
+    guid: 22cd0234fbb0eb141b0c031977d049d3
   m_configObjects: {}
