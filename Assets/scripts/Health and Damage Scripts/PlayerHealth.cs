@@ -6,16 +6,26 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : Health
 {
     [SerializeField] GearSpawner healthSpawner;
+    //[SerializeField] CanvasGroup canvasGroup;
     public int HealthBars = 1;
     public int CurrBars;
     public float regenWait;
     IEnumerator regen;
     public GameMaster gm;
+    AudioSource[] audioData;
+    AudioSource audioHurt;
+    AudioSource audioDie;
+
     private void Start()
     {
         CurrBars = HealthBars;
         while (healthSpawner.Gears.Count < HealthBars) { healthSpawner.AddBar(); };
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+
+        audioData = GetComponents<AudioSource>();
+        audioHurt = audioData[0];
+        audioDie = audioData[1];
+
     }
     public override void Die()
     {
@@ -26,13 +36,15 @@ public class PlayerHealth : Health
             healthSpawner.redoHealth();
         }
         else {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            StartCoroutine(waiter());
             //transform.position = gm.lastCheckPointPos;
         }
+        
         Debug.Log("You Died");
     }
     public override void Damage(float damage)
     {
+        audioHurt.Play();
         if (regen != null) { StopCoroutine(regen); }
         regen = regenarate(regenWait);
         StartCoroutine(regen);
@@ -55,7 +67,20 @@ public class PlayerHealth : Health
     void OnParticleCollision(GameObject other)
     {
         //Debug.Log("Hit");
+        audioHurt.Play();
         StartCoroutine(DamageWithInvincible(0.15f, 3.0f));
     }
+
+    IEnumerator waiter()
+    {
+        if (!audioDie.isPlaying)
+        {
+            audioDie.Play();
+        }
+        GameObject.Find("CanvasGroup").GetComponent<FadeScript>().ShowUI();
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 }
 
