@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/UIScenes/Menu1.unity
     guid: a542ed79905460d46a416f6327dd7d40
   - enabled: 1
+    path: Assets/Scenes/InProgress/JunkyardRedo.unity
+    guid: 9154b5ab8fd50e0448734af1bc6810e0
+  - enabled: 0
     path: Assets/Scenes/CompletedScenes/Junkyard.unity
     guid: 7f9c91b67856f7f468bbc0bdfe965e56
   - enabled: 1

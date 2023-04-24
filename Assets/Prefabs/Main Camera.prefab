@@ -145,7 +145,7 @@ Transform:
   m_Children:
   - {fileID: 1205833021884222625}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &1205833022290094259
 Camera:
@@ -245,6 +245,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 7}
   player: {fileID: 0}
-  offsetSmoothing: 10
+  offsetSmoothing: 5
   wantedPosition: {x: 0, y: 0, z: 0}
   maxDist: 0
