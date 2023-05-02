@@ -22,6 +22,7 @@ public class weaponPrimaryFist : WeaponBase
         start = fist.localPosition;
         lr = GetComponent<LineRenderer>();
         player = GameObject.FindGameObjectWithTag("Player");
+        gameObject.GetComponent<Collider2D>().enabled = false;
     }
 
     // Update is called once per frame
@@ -35,6 +36,7 @@ public class weaponPrimaryFist : WeaponBase
 
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
+                gameObject.GetComponent<Collider2D>().enabled = true;
                 animator.SetTrigger("Attack");
                 //Attack();
             }
@@ -56,6 +58,7 @@ public class weaponPrimaryFist : WeaponBase
                 } 
 
             } else if (Input.GetKeyUp(KeyCode.Mouse0)){
+                gameObject.GetComponent<Collider2D>().enabled = false;
                 returning = true;
             }
         }
@@ -86,7 +89,7 @@ public class weaponPrimaryFist : WeaponBase
         {
             if (enemy.GetComponent<Enemy>() != null)
             {
-                enemy.GetComponent<Enemy>().TakeDamage(10);
+                enemy.GetComponent<Enemy>().TakeDamage(20);
             }
             if (enemy.GetComponent<Health>() != null && enemy.gameObject.tag != "Player")
             {
@@ -94,7 +97,7 @@ public class weaponPrimaryFist : WeaponBase
                 if (enemy.GetComponent<Health>().GetIframes() <= 0)
                 {
                     //enemy.GetComponent<Health>().Damage(1);
-                    StartCoroutine(enemy.GetComponent<Health>().DamageWithInvincible(0.5f, 1.0f));
+                    StartCoroutine(enemy.GetComponent<Health>().DamageWithInvincible(0.5f, 25.0f));
                     if (enemy.gameObject.GetComponent<Rigidbody2D>() != null)
                     {
                         ThrowObject(enemy.gameObject.GetComponent<Rigidbody2D>(), fist, 100f);

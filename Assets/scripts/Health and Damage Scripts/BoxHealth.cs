@@ -15,14 +15,17 @@ public class BoxHealth : Health
     private bool isVulnerable = true; // current vulnerability status
     private float lastChangeTime; // time of last status change
 
+    private float offset;
+
     void Start()
     {
         lastChangeTime = Time.time; // set last change time to current time
+        offset = Random.value;
     }
 
     void Update()
     {
-        float timeSinceLastChange = Time.time - lastChangeTime; // calculate time since last status change
+        float timeSinceLastChange = Time.time - (lastChangeTime- offset); // calculate time since last status change
 
         // check if it's time to change the vulnerability status
         if (timeSinceLastChange >= (isVulnerable ? vulnerableTime : invulnerableTime))

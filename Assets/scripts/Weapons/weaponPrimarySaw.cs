@@ -64,7 +64,7 @@ public class weaponPrimarySaw : WeaponBase
             if (enemy.GetComponent<Enemy>() != null)
             {
 
-                enemy.GetComponent<Enemy>().TakeDamage(1);
+                enemy.GetComponent<Enemy>().TakeDamage(3);
             }
             if (enemy.GetComponent<Health>() != null && enemy.gameObject.tag != "Player")
             {
@@ -72,7 +72,7 @@ public class weaponPrimarySaw : WeaponBase
                 if (enemy.GetComponent<Health>().GetIframes() <= 0)
                 {
                     //enemy.GetComponent<Health>().Damage(1);
-                    StartCoroutine(enemy.GetComponent<Health>().DamageWithInvincible(0.5f, 1.0f));
+                    StartCoroutine(enemy.GetComponent<Health>().DamageWithInvincible(0.2f, 5.0f));
                     if (enemy.gameObject.GetComponent<Rigidbody2D>() != null)
                     {
                         ThrowObject(enemy.gameObject.GetComponent<Rigidbody2D>(), sawBlade, 100f);
