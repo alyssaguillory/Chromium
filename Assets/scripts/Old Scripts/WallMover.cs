@@ -6,6 +6,7 @@ public class WallMover : MonoBehaviour
 {
     [SerializeField] GameObject wall;
     [SerializeField] BossController boss;
+    [SerializeField] Collider2D inviswall;
     public bool active = false;
     public Vector2 current;
     private void OnTriggerEnter2D(Collider2D other)
@@ -21,6 +22,7 @@ public class WallMover : MonoBehaviour
     IEnumerator wallDrop()
     {
         //7.12
+        inviswall.enabled = true;
         while(wall.transform.localPosition.y > 7.12)
         {
             current = wall.transform.position;
