@@ -13,6 +13,8 @@ public class GearSpawner : MonoBehaviour
     [SerializeField] PlayerHealth playerHealth;
     [SerializeField] float changeSpeed = 1.0f;
     Image currGear;
+    private float timePassed;
+    private float lastHealth;
     //GameObject[] Gears;
     // Start is called before the first frame update
     void Start()
@@ -26,12 +28,14 @@ public class GearSpawner : MonoBehaviour
     {
         currGear = Gears[playerHealth.CurrBars-1].transform.GetChild(1).gameObject.GetComponent<Image>();
         slowHealth();
+        
     }
     public void AddBar()
     {
         Gears.Add((GameObject)Instantiate(GearMaster, UICanvas.transform));
         Gears[Gears.Count - 1].GetComponent<RectTransform>().anchoredPosition = lastPosition + addVector;
         lastPosition += addVector;
+        //redoHealth();
     }
     public void redoHealth()
     {
@@ -47,14 +51,19 @@ public class GearSpawner : MonoBehaviour
     }
     public void slowHealth()
     {
-        currGear.fillAmount = Mathf.Lerp(currGear.fillAmount, playerHealth.CurrHealth/playerHealth.MaxHealth, changeSpeed*Time.deltaTime);
+        /*
+        timePassed += Time.deltaTime;
+        currGear.fillAmount = Mathf.Lerp(lastHealth, playerHealth.CurrHealth / playerHealth.MaxHealth, timePassed);
+        */
+        currGear.fillAmount = playerHealth.CurrHealth / playerHealth.MaxHealth;
     }
     IEnumerator specialFill(Image deadGear)
     {
-        while(deadGear.fillAmount != 0)
+        while(deadGear.fillAmount >= 0.05)
         {
             deadGear.fillAmount -= deadGear.fillAmount * changeSpeed * Time.deltaTime;
             yield return null;
         }
+        deadGear.fillAmount = 0;
     }
 }

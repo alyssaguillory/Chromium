@@ -28,8 +28,10 @@ public class LevelControl : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             //SceneManager.LoadScene(1);
-            SceneManager.LoadScene(levelName);
+            gm.bars = other.GetComponent<PlayerHealth>().HealthBars;
             gm.lastCheckPointPos = nextLevelPoint;
+            SceneManager.LoadScene(levelName);
+            
         }
         /*if(other.CompareTag("Player") && been_there_flag == true)
         {
