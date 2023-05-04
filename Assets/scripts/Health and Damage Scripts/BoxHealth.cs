@@ -58,17 +58,13 @@ public class BoxHealth : Health
         Destroy(gameObject);
     }
     //invincibility phase 
-
-    public override IEnumerator DamageWithInvincible(float Iframes, float damage)
+    public override void Damage(float damage, float iFrames = 0.0f)
     {
         if (IsVulnerable())
         {
-            Damage(damage);
-            StartCoroutine(DamageFlash(Iframes));
-            yield return null;
+            base.Damage(damage, iFrames);
         }
-
-
+        
     }
 
 }

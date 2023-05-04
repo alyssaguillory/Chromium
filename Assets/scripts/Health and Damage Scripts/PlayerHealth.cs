@@ -12,9 +12,9 @@ public class PlayerHealth : Health
     public float regenWait;
     IEnumerator regen;
     public GameMaster gm;
-    AudioSource[] audioData;
-    AudioSource audioHurt;
-    AudioSource audioDie;
+    //AudioSource[] audioData;
+    //AudioSource audioHurt;
+    //AudioSource audioDie;
 
     private void Start()
     {
@@ -22,9 +22,9 @@ public class PlayerHealth : Health
         while (healthSpawner.Gears.Count < HealthBars) { healthSpawner.AddBar(); };
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
 
-        audioData = GetComponents<AudioSource>();
-        audioHurt = audioData[0];
-        audioDie = audioData[1];
+        //audioData = GetComponents<AudioSource>();
+        //audioHurt = audioData[0];
+        //audioDie = audioData[1];
 
     }
     public override void Die()
@@ -42,13 +42,12 @@ public class PlayerHealth : Health
         
         Debug.Log("You Died");
     }
-    public override void Damage(float damage)
+    public override void Damage(float damage, float iFrames = 0.0f)
     {
-        audioHurt.Play();
         if (regen != null) { StopCoroutine(regen); }
         regen = regenarate(regenWait);
         StartCoroutine(regen);
-        base.Damage(damage);
+        base.Damage(damage, iFrames);
     }
     IEnumerator regenarate(float regenTimer)
     {
@@ -67,16 +66,17 @@ public class PlayerHealth : Health
     void OnParticleCollision(GameObject other)
     {
         //Debug.Log("Hit");
-        audioHurt.Play();
-        StartCoroutine(DamageWithInvincible(0.15f, 3.0f));
+        //audioHurt.Play();
+        Damage(3.0f, 0.1f);
     }
 
     IEnumerator waiter()
     {
+        /*
         if (!audioDie.isPlaying)
         {
             audioDie.Play();
-        }
+        } */
         GameObject.Find("CanvasGroup").GetComponent<FadeScript>().ShowUI();
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

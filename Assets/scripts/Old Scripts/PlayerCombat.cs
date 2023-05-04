@@ -41,10 +41,10 @@ public class PlayerCombat : MonoBehaviour
             sawBlade.localPosition = sawBlade.localPosition + ((Vector3)toHitSpot + (Vector3)start - sawBlade.localPosition) * Time.deltaTime * 8;
             buzzSaw.Rotate(0.0f, 0.0f, 5.0f);
             animator.SetBool("isFighting", true);
-            sawBlade.gameObject.GetComponent<CircleCollider2D>().enabled = true;
+            //sawBlade.gameObject.GetComponent<CircleCollider2D>().enabled = true;
             Attack();
         }
-        else { sawBlade.localPosition = (Vector2)sawBlade.localPosition - ((Vector2)sawBlade.localPosition - start) * Time.deltaTime * 2; sawBlade.gameObject.GetComponent<CircleCollider2D>().enabled = false; }
+        else { animator.SetBool("isFighting", false); sawBlade.localPosition = (Vector2)sawBlade.localPosition - ((Vector2)sawBlade.localPosition - start) * Time.deltaTime * 2; /*sawBlade.gameObject.GetComponent<CircleCollider2D>().enabled = false; */}
 
     }
     void Attack()
@@ -53,27 +53,14 @@ public class PlayerCombat : MonoBehaviour
 
         foreach(Collider2D enemy in hitEnemies)
         {
-            if (enemy.GetComponent<Enemy>() != null)
-            {
-                
-                enemy.GetComponent<Enemy>().TakeDamage(1);
-            }
             if(enemy.GetComponent<Health>() != null && enemy.gameObject.tag != "Player")
             {
-                //Debug.Log("Enemy has been hit!");
-                if (enemy.GetComponent<Health>().GetIframes() <= 0)
-                {
-                    //enemy.GetComponent<Health>().Damage(1);
-                    StartCoroutine(enemy.GetComponent<Health>().DamageWithInvincible(0.5f, 1.0f));
-                    if (enemy.gameObject.GetComponent<Rigidbody2D>() != null)
-                    {
-                        ThrowObject(enemy.gameObject.GetComponent<Rigidbody2D>(), sawBlade, 100f);
-                    }
-                    //sawBlade.GetChild(1).position = enemy.transform.position;
-                    //sawBlade.GetChild(1).LookAt(sawBlade);
-                    //sawBlade.GetComponentInChildren<ParticleSystem>().Play();
-                    
-                }
+                enemy.GetComponent<Health>().Damage(1.0f, 0.5f);
+            }
+            if (enemy.gameObject.GetComponent<Rigidbody2D>() != null)
+            {
+                Debug.Log("Throwing");
+                ThrowObject(enemy.gameObject.GetComponent<Rigidbody2D>(), sawBlade, 3000f);
             }
         }
     }
@@ -82,30 +69,7 @@ public class PlayerCombat : MonoBehaviour
         Gizmos.color = new Color(1, 1, 0, 0.75F);
         Gizmos.DrawSphere(sawBlade.position, attackRange);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.GetComponent<Rigidbody2D>() != null)
-        {
-            ThrowObject(collision.gameObject.GetComponent<Rigidbody2D>(), sawBlade);
-            //sawBlade.GetChild(1).position = collision.transform.position;
-            //sawBlade.GetChild(1).LookAt(sawBlade);
-            //sawBlade.GetComponentInChildren<ParticleSystem>().Play();
-            /*            
-            Vector2 RecoilVector = collision.gameObject.GetComponent<Transform>().position - sawBlade.position;
-            RecoilVector = RecoilVector.normalized * 300;
-            if(RecoilVector.y < 0)
-            {
-                RecoilVector = new Vector2(RecoilVector.x, RecoilVector.y*-2);
-            }
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(RecoilVector);
-            if (collision.gameObject.GetComponent<Enemy>() != null)
-            {
-                Debug.Log("Enemy has been hit!");
-                collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
-            }
-            */
-        }
-    }
+    
     void ThrowObject(Rigidbody2D thrown, Transform thrower, float multiplier = 300f)
     {
         Vector2 RecoilVector = thrown.gameObject.GetComponent<Transform>().position - thrower.position;
