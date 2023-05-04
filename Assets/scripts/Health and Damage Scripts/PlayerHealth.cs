@@ -18,9 +18,14 @@ public class PlayerHealth : Health
 
     private void Start()
     {
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+        if (gm.bars != null)
+            HealthBars = gm.bars;
+        if (HealthBars == 0)
+            HealthBars = 1;
         CurrBars = HealthBars;
         while (healthSpawner.Gears.Count < HealthBars) { healthSpawner.AddBar(); };
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+        
 
         //audioData = GetComponents<AudioSource>();
         //audioHurt = audioData[0];
@@ -69,6 +74,8 @@ public class PlayerHealth : Health
         //audioHurt.Play();
         Damage(3.0f, 0.1f);
     }
+
+    public void AddBar() { HealthBars++; CurrBars++; healthSpawner.AddBar(); }
 
     IEnumerator waiter()
     {
