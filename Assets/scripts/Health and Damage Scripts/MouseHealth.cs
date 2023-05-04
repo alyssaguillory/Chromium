@@ -5,7 +5,7 @@ using UnityEngine;
 public class MouseHealth : Health
 {
     [SerializeField] MouseAi ActiveAi;
-    AudioClip dissapteDamage;
+    [SerializeField] AudioClip dissapteDamage;
     
 
     private void Start()

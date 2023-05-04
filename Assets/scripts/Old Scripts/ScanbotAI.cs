@@ -6,6 +6,9 @@ using Pathfinding;
 
 public class ScanbotAI : MonoBehaviour
 {
+    [SerializeField] AudioSource AudioS;
+    [SerializeField] AudioClip attackSound;
+
     public GameObject ProjectilePrefab;
     public Transform LaunchOffset; 
     
@@ -66,6 +69,7 @@ public class ScanbotAI : MonoBehaviour
                 //anim.SetTrigger("rangedAttack");
                 Debug.Log("player seen");
                 Instantiate(ProjectilePrefab, LaunchOffset.position, Quaternion.identity);
+                AudioS.PlayOneShot(attackSound);
             }
 
             switch (direction)

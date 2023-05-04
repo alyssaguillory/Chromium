@@ -100,6 +100,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c411b3b73f49f489ff16662105a1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioS: {fileID: 2094253933}
+  revealSound: {fileID: 8300000, guid: 4617b10ce159d0c46b0c2c4cef50a003, type: 3}
+  attackSound: {fileID: 8300000, guid: c8c11df7688563c4e96404d3fb6562e5, type: 3}
+  zapHit: {fileID: 8300000, guid: 31fd7d2b05d89704cb0827845d4853ae, type: 3}
+  zapMiss: {fileID: 8300000, guid: 82a23ca73ebfb764982ef46f6fd3802f, type: 3}
   target: {fileID: 0}
   speed: 1600
   nextWaypointDistance: 3
@@ -165,7 +170,11 @@ MonoBehaviour:
   - {fileID: 7026157295739171451}
   - {fileID: 721976497264823967}
   - {fileID: 1305423621877074109}
+  soundPlayer: {fileID: 2094253933}
+  hurt: {fileID: 8300000, guid: 61156f64a4268c1498d71b5dc3d5348d, type: 3}
+  die: {fileID: 8300000, guid: dd9e67c36c47adc448f276624ba253c6, type: 3}
   ActiveAi: {fileID: 3152374672231389701}
+  dissapteDamage: {fileID: 8300000, guid: a4aa71a5fb4906246891cf0f3b4f9099, type: 3}
 --- !u!60 &3152374672231389696
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -209,7 +218,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 61156f64a4268c1498d71b5dc3d5348d, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.6
   m_Pitch: 1

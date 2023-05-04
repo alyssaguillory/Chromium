@@ -5,6 +5,11 @@ using Pathfinding;
 
 public class MouseAi : MonoBehaviour
 {
+    [SerializeField] AudioSource AudioS;
+    [SerializeField] AudioClip revealSound;
+    [SerializeField] AudioClip attackSound;
+    [SerializeField] AudioClip zapHit;
+    //[SerializeField] AudioClip zapMiss;
     // Start is called before the first frame update
     public Transform target;
     
@@ -156,6 +161,7 @@ public class MouseAi : MonoBehaviour
             }
             State = 2;
             electrify();
+            AudioS.PlayOneShot(revealSound);
             //Do particle effects
         }
     }
@@ -175,6 +181,7 @@ public class MouseAi : MonoBehaviour
             State = 4;
             padTime = 0.5f;
             Attack();
+            AudioS.PlayOneShot(attackSound);
         }
         else if (!isElectric) { Flee(); }
         else if (active && isGrounded) { FollowPath(); }
@@ -199,6 +206,7 @@ public class MouseAi : MonoBehaviour
             //Debug.Log("Bounds intersecting");
             target.gameObject.GetComponent<Health>().Damage(50.0f, 0.2f);
             dealtDamage = true;
+            AudioS.PlayOneShot(zapHit);
         }
         padTime -= Time.deltaTime;
     }
@@ -282,6 +290,7 @@ public class MouseAi : MonoBehaviour
     }
     public void dissapate()
     {
+        //if(!dealtDamage) { AudioS.PlayOneShot(zapMiss); }
         State = 5;
         isElectric = false;
         ears[7].enabled = false;
