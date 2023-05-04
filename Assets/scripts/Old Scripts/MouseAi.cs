@@ -197,7 +197,7 @@ public class MouseAi : MonoBehaviour
         if (rb.gameObject.GetComponent<Collider2D>().bounds.Intersects(target.gameObject.GetComponent<Collider2D>().bounds) && !dealtDamage)
         {
             //Debug.Log("Bounds intersecting");
-            StartCoroutine(target.gameObject.GetComponent<Health>().DamageWithInvincible(0.6f, 50.0f));
+            target.gameObject.GetComponent<Health>().Damage(50.0f, 0.2f);
             dealtDamage = true;
         }
         padTime -= Time.deltaTime;

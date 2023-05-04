@@ -9,20 +9,37 @@ public class Health : MonoBehaviour
     private float Iframe = 0.0f;
     public GameObject corpse;
     public SpriteRenderer[] flash;
+
+    [SerializeField] AudioSource soundPlayer;
+    [SerializeField] AudioClip hurt;
+    [SerializeField] AudioClip die;
     private void OnEnable() => CurrHealth = MaxHealth;
     // Start is called before the first frame update
     private void Start()
     {
-        CurrHealth = MaxHealth;
+        soundPlayer = GetComponent<AudioSource>();
     }
-    public virtual void Damage(float damage)
+    public virtual void Damage(float damage, float iFrames = 0.0f)
     {
+        
+        if(Iframe <= 0.0f)
+        {
+            CurrHealth -= damage;
+            if (CurrHealth <= 0)
+            {
+                Die();
+                PlaySound(die);
+            }
+            else
+            {
+                PlaySound(hurt);
+                StartCoroutine(IFrameActivator(iFrames));
+                StartCoroutine(DamageFlash(iFrames));
+            }
+        }
         /* How to start the Iframes
         StartCoroutine(Health.IFrameActivator(0.2f));
         */
-        CurrHealth -= damage;
-        if (CurrHealth <= 0)
-            Die();
     }
     public virtual void Die()
     {
@@ -31,6 +48,8 @@ public class Health : MonoBehaviour
         Destroy(gameObject);
     }
     public float GetIframes() { return Iframe; }
+
+    public void PlaySound(AudioClip soundByte) { soundPlayer.PlayOneShot(soundByte); }
 
     public IEnumerator IFrameActivator(float Iframes)
     {

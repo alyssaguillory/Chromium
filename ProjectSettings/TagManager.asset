@@ -49,6 +49,9 @@ TagManager:
   - name: Backgrounds
     uniqueID: 1981886389
     locked: 0
+  - name: Dirt
+    uniqueID: 2429778707
+    locked: 0
   - name: StaticObjects
     uniqueID: 340447403
     locked: 0
